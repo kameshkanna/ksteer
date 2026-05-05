@@ -75,6 +75,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--model", required=True, type=str, help="HuggingFace model ID or local path")
     p.add_argument("--model-name", default=None, type=str, help="Short tag for output files")
     p.add_argument("--device", default=None, type=str, help="Force device: cuda / cpu / mps")
+    p.add_argument("--quantize", default=None, choices=["4bit", "8bit"],
+                   help="bitsandbytes quantization for large models that exceed single-GPU VRAM")
     p.add_argument("--batch-size", default=4, type=int)
     p.add_argument("--max-length", default=256, type=int)
     p.add_argument("--output-dir", default="results/exp01", type=str)
@@ -98,7 +100,7 @@ def main() -> None:
     out = Path(args.output_dir) / model_name
     out.mkdir(parents=True, exist_ok=True)
 
-    model, tokenizer = load_model(args.model, device=args.device)
+    model, tokenizer = load_model(args.model, device=args.device, quantize=args.quantize)
 
     # ── Step 1a: profile all layers ──────────────────────────────────────
     logger.info("=== Step 1a: Layer norm profiling ===")

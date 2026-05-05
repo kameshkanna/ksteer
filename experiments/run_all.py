@@ -52,6 +52,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--tiers", nargs="+", default=None,
                    help="Filter by tier: small medium large")
     p.add_argument("--device", default=None, type=str)
+    p.add_argument("--quantize", default=None, choices=["4bit", "8bit"],
+                   help="bitsandbytes quantization for large models that exceed single-GPU VRAM")
     p.add_argument("--batch-size", default=4, type=int)
     p.add_argument("--max-length", default=256, type=int)
     p.add_argument("--output-dir", default="results/exp01", type=str)
@@ -106,6 +108,8 @@ def build_command(model_key: str, model_cfg: dict, args: argparse.Namespace) -> 
     ]
     if args.device:
         cmd += ["--device", args.device]
+    if args.quantize:
+        cmd += ["--quantize", args.quantize]
     if args.run_ceiling_sweep:
         cmd += ["--run-ceiling-sweep"]
         cmd += ["--sweep-layer-pcts"] + [str(p) for p in args.sweep_layer_pcts]

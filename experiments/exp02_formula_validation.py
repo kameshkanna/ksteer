@@ -59,6 +59,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--model", required=True, type=str)
     p.add_argument("--model-name", default=None, type=str)
     p.add_argument("--device", default=None, type=str)
+    p.add_argument("--quantize", default=None, choices=["4bit", "8bit"],
+                   help="bitsandbytes quantization for large models")
     p.add_argument("--exp01-dir", default="results/exp01", type=str,
                    help="Directory containing Exp 01 norm profile results")
     p.add_argument("--exp02-dir", default="results/exp02", type=str,
@@ -151,7 +153,7 @@ def main() -> None:
     })
     logger.info("Sweep layers: %s", sweep_layers)
 
-    model, tokenizer = load_model(args.model, device=args.device)
+    model, tokenizer = load_model(args.model, device=args.device, quantize=args.quantize)
     sweeper = CeilingSweeper(model, tokenizer, profile)
 
     # behavior → layer_idx → empirical_ceiling_alpha
