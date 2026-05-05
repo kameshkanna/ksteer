@@ -115,6 +115,7 @@ class LayerNormProfiler:
         self._num_layers = get_num_layers(model)
         self._hooks: list = []
         self._buffer: Dict[int, List[torch.Tensor]] = {}
+        self._attention_mask: Optional[torch.Tensor] = None  # set per batch
 
     def profile(
         self,
@@ -147,9 +148,16 @@ class LayerNormProfiler:
     def _make_hook(self, layer_idx: int) -> Callable:
         def hook(module: nn.Module, input: tuple, output) -> None:
             hs = output[0] if isinstance(output, tuple) else output
-            # hs: (batch, seq_len, hidden_dim)  →  flatten to (N,) norm values
-            norms = hs.float().norm(dim=-1).reshape(-1)
-            self._buffer[layer_idx].append(norms.detach().cpu())
+            # hs: (batch, seq_len, hidden_dim)
+            norms = hs.float().norm(dim=-1)  # (batch, seq_len)
+            # Exclude padding positions — they have artificially low norms and
+            # skew the mean, causing K_l to be underestimated (confirmed on Qwen2.5).
+            if self._attention_mask is not None:
+                mask = self._attention_mask.bool().to(norms.device)
+                valid_norms = norms[mask]
+            else:
+                valid_norms = norms.reshape(-1)
+            self._buffer[layer_idx].append(valid_norms.detach().cpu())
         return hook
 
     def _register_hooks(self) -> None:
@@ -170,8 +178,10 @@ class LayerNormProfiler:
             truncation=True,
             max_length=max_length,
         ).to(self._device)
+        self._attention_mask = inputs["attention_mask"]
         with torch.no_grad():
             self._model(**inputs)
+        self._attention_mask = None
         del inputs
         if self._device.type == "cuda":
             torch.cuda.empty_cache()
