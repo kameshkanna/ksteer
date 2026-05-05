@@ -51,8 +51,6 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--model", required=True, type=str, help="HuggingFace model ID or local path")
     p.add_argument("--model-name", default=None, type=str)
     p.add_argument("--device", default=None, type=str)
-    p.add_argument("--quantize", default=None, choices=["4bit", "8bit"],
-                   help="bitsandbytes quantization for large models")
     p.add_argument("--max-length", default=256, type=int)
     p.add_argument("--data-dir", default="data/behaviors", type=str)
     p.add_argument("--output-dir", default="results/exp02", type=str)
@@ -100,7 +98,7 @@ def main() -> None:
         logger.info("All behaviors already extracted. Done.")
         return
 
-    model, tokenizer = load_model(args.model, device=args.device, quantize=args.quantize)
+    model, tokenizer = load_model(args.model, device=args.device)
     extractor = ContrastiveExtractor(model, tokenizer, model_name)
 
     extracted = []

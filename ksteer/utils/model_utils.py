@@ -1,11 +1,11 @@
 """Utilities for model loading and architecture-agnostic layer access."""
 
 import logging
-from typing import Iterator, Literal, Optional, Tuple
+from typing import Iterator, Optional, Tuple
 
 import torch
 import torch.nn as nn
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, PreTrainedModel, PreTrainedTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, PreTrainedModel, PreTrainedTokenizer
 
 logger = logging.getLogger(__name__)
 
@@ -41,19 +41,17 @@ def load_model(
     device: Optional[str] = None,
     torch_dtype: torch.dtype = torch.float16,
     trust_remote_code: bool = False,
-    quantize: Optional[Literal["4bit", "8bit"]] = None,
 ) -> Tuple[PreTrainedModel, PreTrainedTokenizer]:
     """
-    Load a causal LM and its tokenizer, routing to the best available device.
+    Load a causal LM and its tokenizer.
 
-    Args:
-        quantize: "4bit" or "8bit" for bitsandbytes quantization. Required for
-                  models that exceed single-GPU VRAM (e.g. 70B on 80GB A100).
-                  Activations and norms are measured in the dequantized dtype so
-                  K_l values remain valid.
+    Uses device_map="auto" for all GPU/MPS targets so accelerate distributes
+    layers across available VRAM and spills the remainder to CPU RAM. This
+    handles large models (70B, 72B) on a single A100 + host RAM without
+    quantization, preserving full float16 activation fidelity for K_l measurement.
     """
     resolved_device = resolve_device(device)
-    logger.info("Loading %s on %s  quantize=%s", model_name_or_path, resolved_device, quantize or "none")
+    logger.info("Loading %s  target=%s", model_name_or_path, resolved_device)
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_name_or_path,
@@ -62,41 +60,27 @@ def load_model(
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    load_kwargs: dict = {"trust_remote_code": trust_remote_code}
-
-    if quantize == "4bit":
-        load_kwargs["quantization_config"] = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_compute_dtype=torch.float16,
-            bnb_4bit_use_double_quant=True,
-            bnb_4bit_quant_type="nf4",
-        )
-        # device_map="auto" is required for bitsandbytes and handles CPU offload automatically
-        load_kwargs["device_map"] = "auto"
-    elif quantize == "8bit":
-        load_kwargs["quantization_config"] = BitsAndBytesConfig(load_in_8bit=True)
-        load_kwargs["device_map"] = "auto"
-    else:
-        load_kwargs["dtype"] = torch_dtype
-        if resolved_device.type != "cpu":
-            load_kwargs["device_map"] = "auto"
-
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path, **load_kwargs)
-
-    if resolved_device.type == "cpu" and quantize is None:
+    load_kwargs: dict = {
+        "dtype": torch_dtype,
+        "trust_remote_code": trust_remote_code,
+    }
+    if resolved_device.type == "cpu":
+        model = AutoModelForCausalLM.from_pretrained(model_name_or_path, **load_kwargs)
         model = model.to(resolved_device)
+    else:
+        load_kwargs["device_map"] = "auto"
+        model = AutoModelForCausalLM.from_pretrained(model_name_or_path, **load_kwargs)
 
-    # Force right-padding for all models so attention_mask positions are consistent
-    # across batch items regardless of model default (Qwen2 defaults to left-pad).
+    # Force right-padding so attention_mask positions are consistent across batch
+    # items regardless of model default (Qwen2 defaults to left-pad).
     tokenizer.padding_side = "right"
 
     model.eval()
     logger.info(
-        "Loaded: family=%s  hidden_dim=%d  num_layers=%d  pad_side=%s  dtype=%s",
+        "Loaded: family=%s  hidden_dim=%d  num_layers=%d  dtype=%s",
         model.config.model_type,
         get_hidden_dim(model),
         get_num_layers(model),
-        tokenizer.padding_side,
         next(model.parameters()).dtype,
     )
     return model, tokenizer

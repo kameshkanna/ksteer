@@ -22,6 +22,7 @@ Usage:
 """
 
 import argparse
+import gc
 import json
 import logging
 import subprocess
@@ -29,6 +30,7 @@ import sys
 import time
 from pathlib import Path
 
+import torch
 import yaml
 
 logging.basicConfig(
@@ -52,8 +54,6 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--tiers", nargs="+", default=None,
                    help="Filter by tier: small medium large")
     p.add_argument("--device", default=None, type=str)
-    p.add_argument("--quantize", default=None, choices=["4bit", "8bit"],
-                   help="bitsandbytes quantization for large models that exceed single-GPU VRAM")
     p.add_argument("--batch-size", default=4, type=int)
     p.add_argument("--max-length", default=256, type=int)
     p.add_argument("--output-dir", default="results/exp01", type=str)
@@ -108,16 +108,36 @@ def build_command(model_key: str, model_cfg: dict, args: argparse.Namespace) -> 
     ]
     if args.device:
         cmd += ["--device", args.device]
-    if args.quantize:
-        cmd += ["--quantize", args.quantize]
     if args.run_ceiling_sweep:
         cmd += ["--run-ceiling-sweep"]
         cmd += ["--sweep-layer-pcts"] + [str(p) for p in args.sweep_layer_pcts]
     return cmd
 
 
+def purge_gpu_memory() -> None:
+    """
+    Aggressively free all GPU and CPU memory between model runs.
+
+    Each model runs in its own subprocess so CUDA memory is released when the
+    process exits. This call runs in the orchestrator process to reclaim any
+    residual allocations (e.g. from yaml/json loading, torch imports) and
+    ensures the next subprocess starts with a clean VRAM slate.
+    """
+    gc.collect()
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.synchronize()
+        torch.cuda.empty_cache()
+        torch.cuda.ipc_collect()
+        mem_free, mem_total = torch.cuda.mem_get_info()
+        logger.info(
+            "GPU memory after cleanup: %.1f GB free / %.1f GB total",
+            mem_free / 1e9, mem_total / 1e9,
+        )
+
+
 def run_model(model_key: str, model_cfg: dict, args: argparse.Namespace) -> bool:
-    """Run exp01 for one model. Returns True on success."""
+    """Run exp01 for one model in a subprocess. Returns True on success."""
     cmd = build_command(model_key, model_cfg, args)
     family = model_cfg.get("family", "?")
     tier = model_cfg.get("tier", "?")
@@ -133,10 +153,11 @@ def run_model(model_key: str, model_cfg: dict, args: argparse.Namespace) -> bool
 
     if result.returncode == 0:
         logger.info("✓ %s completed in %.1fs", model_key, elapsed)
-        return True
     else:
         logger.error("✗ %s failed (exit %d) after %.1fs", model_key, result.returncode, elapsed)
-        return False
+
+    purge_gpu_memory()
+    return result.returncode == 0
 
 
 def main() -> None:
