@@ -83,8 +83,15 @@ def select_models(config: dict, args: argparse.Namespace) -> list[tuple[str, dic
     return models
 
 
-def already_done(model_key: str, output_dir: str) -> bool:
-    return (Path(output_dir) / model_key / "norm_profile.json").exists()
+def already_done(model_key: str, output_dir: str, need_ceiling: bool = False) -> bool:
+    base = Path(output_dir) / model_key
+    profile_exists = (base / "norm_profile.json").exists()
+    if not profile_exists:
+        return False
+    if need_ceiling:
+        # Skip only if ceiling sweep results also exist
+        return (base / "ceiling_sweep.json").exists()
+    return True
 
 
 def build_command(model_key: str, model_cfg: dict, args: argparse.Namespace) -> list[str]:
@@ -139,7 +146,7 @@ def main() -> None:
 
     logger.info("Selected %d model(s):", len(selected))
     for key, cfg in selected:
-        skip = args.skip_existing and already_done(key, args.output_dir)
+        skip = args.skip_existing and already_done(key, args.output_dir, need_ceiling=args.run_ceiling_sweep)
         status = "SKIP (exists)" if skip else f"tier={cfg.get('tier','?')}  family={cfg.get('family','?')}"
         logger.info("  %-25s %s", key, status)
 
@@ -151,7 +158,7 @@ def main() -> None:
     total_start = time.time()
 
     for model_key, model_cfg in selected:
-        if args.skip_existing and already_done(model_key, args.output_dir):
+        if args.skip_existing and already_done(model_key, args.output_dir, need_ceiling=args.run_ceiling_sweep):
             logger.info("Skipping %s — results already exist.", model_key)
             results[model_key] = True
             continue

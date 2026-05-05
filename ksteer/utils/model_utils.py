@@ -54,7 +54,7 @@ def load_model(
         tokenizer.pad_token = tokenizer.eos_token
 
     load_kwargs: dict = {
-        "torch_dtype": torch_dtype,
+        "dtype": torch_dtype,
         "trust_remote_code": trust_remote_code,
     }
     if resolved_device.type != "cpu":
@@ -65,12 +65,17 @@ def load_model(
     if resolved_device.type == "cpu":
         model = model.to(resolved_device)
 
+    # Force right-padding for all models so attention_mask positions are consistent
+    # across batch items regardless of model default (Qwen2 defaults to left-pad).
+    tokenizer.padding_side = "right"
+
     model.eval()
     logger.info(
-        "Loaded: family=%s  hidden_dim=%d  num_layers=%d",
+        "Loaded: family=%s  hidden_dim=%d  num_layers=%d  pad_side=%s",
         model.config.model_type,
         get_hidden_dim(model),
         get_num_layers(model),
+        tokenizer.padding_side,
     )
     return model, tokenizer
 
