@@ -222,7 +222,9 @@ def plot_formula_validation(
 
         if uncapped_layers:
             xs_unc = [l / num_layers for l in uncapped_layers]
-            axes[0].plot(xs_unc, [max(ceilings.values() or [0]) + 0.5] * len(xs_unc),
+            measured_vals = [v for v in ceilings.values() if v is not None]
+            marker_y = (max(measured_vals) if measured_vals else 3.0) + 0.5
+            axes[0].plot(xs_unc, [marker_y] * len(xs_unc),
                          "^", color=color, alpha=0.5, markersize=6,
                          label=f"{behavior} (>max)" if i == 0 else "")
 

@@ -67,8 +67,12 @@ def parse_args() -> argparse.Namespace:
                    help="Output dir (default: {exp02-dir}/{model-name}/formula_validation)")
     p.add_argument(
         "--sweep-layer-pcts", nargs="+", type=float,
-        default=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
-        help="Layer depths as fractions to test the formula at",
+        default=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+        help="Layer depths as fractions to test the formula at. 1.0 resolves to the last layer.",
+    )
+    p.add_argument(
+        "--sweep-all-layers", action="store_true",
+        help="Test every single layer instead of depth percentages. Slow but complete.",
     )
     p.add_argument(
         "--alphas", nargs="+", type=float,
@@ -145,11 +149,15 @@ def main() -> None:
     logger.info("Behaviors to validate: %s", behaviors)
 
     # Resolve sweep layers
-    sweep_layers = sorted({
-        max(0, min(profile.num_layers - 1, int(pct * profile.num_layers)))
-        for pct in args.sweep_layer_pcts
-    })
-    logger.info("Sweep layers: %s", sweep_layers)
+    if args.sweep_all_layers:
+        sweep_layers = list(range(profile.num_layers))
+    else:
+        sweep_layers = sorted({
+            # pct=1.0 maps to num_layers-1 (last layer) via the min clamp
+            max(0, min(profile.num_layers - 1, round(pct * (profile.num_layers - 1))))
+            for pct in args.sweep_layer_pcts
+        })
+    logger.info("Sweep layers (%d total): %s", len(sweep_layers), sweep_layers)
 
     model, tokenizer = load_model(args.model, device=args.device)
     sweeper = CeilingSweeper(model, tokenizer, profile)
