@@ -74,6 +74,7 @@ ksteer/
 │   ├── exp02_contrastive_vectors.py    Exp 02: behavioral direction extraction
 │   ├── exp02_formula_validation.py     Exp 02b: K_l universality test across layer depths
 │   ├── exp03_formula_calibration.py    Exp 03: K_l^b = K_l/ρ_l calibration (no GPU needed)
+│   ├── exp04_instruct_vs_base.py       Exp 04: attractor amplification gamma_l = alpha_eff^IT / alpha_eff^base
 │   ├── run_all.py                      batch runner — orchestrates Exp 01/02/02b across models
 │   ├── aggregate_results.py            consolidate all results into cross-family summary
 │   ├── compare_profiles.py             cross-model K_l comparison plots
@@ -482,6 +483,61 @@ python experiments/exp03_formula_calibration.py --models llama-3.2-1b qwen2.5-1.
 | `--models` | all found | Model name keys to process |
 | `--window-min` | `0.4` | Minimum layer depth fraction (default: 40%) |
 | `--window-max` | `0.8` | Maximum layer depth fraction (default: 80%) |
+
+---
+
+## Experiment 04 — Attractor Amplification: Base vs Instruct
+
+**What it does:** Tests whether instruction-tuned models have a higher effective steering ceiling than their base counterparts, and whether the effect is direction-dependent. Computes the attractor amplification factor `gamma_l = alpha_eff^IT / alpha_eff^base` using the same behavioral vector on both variants. Separates two effects: norm inflation (K_l changes post-RLHF) and directional resistance (K_l same, but model resists perturbations in specific directions).
+
+**Critical prediction:** If RLHF creates directionally biased hardening:
+- `gamma_l(unsafe direction)` >> 1 — RLHF resists steering toward harmful outputs
+- `gamma_l(safe direction)` ≈ 1 or < 1 — RLHF does not resist steering toward safe outputs
+- `gamma_l(neutral)` ≈ 1 — RLHF indifferent to non-safety directions
+
+The **asymmetry index** = `mean_gamma(unsafe) / mean_gamma(safe)` is a quantitative measure of how directionally biased the safety training is.
+
+**Requires:** Exp 01 (base model norm profile) and Exp 02 (behavioral vectors) for each pair. Instruct model is profiled live during this experiment.
+
+**Pairs config:** `configs/instruct_pairs.yaml` — defines base ↔ instruct pairs for each model.
+
+### Run — specific pairs
+
+```bash
+python experiments/exp04_instruct_vs_base.py --pairs llama-3.2-1b qwen2.5-3b
+```
+
+### Run — all small models
+
+```bash
+python experiments/exp04_instruct_vs_base.py --tiers small
+```
+
+### Run — all Llama pairs
+
+```bash
+python experiments/exp04_instruct_vs_base.py --families llama
+```
+
+### Key outputs
+
+| File | Contents |
+|---|---|
+| `results/exp04/{pair}/norm_comparison.json` | K_l^base vs K_l^IT per layer (Effect 1 measurement) |
+| `results/exp04/{pair}/{behavior}_gamma.json` | gamma_l per layer, raw and norm-corrected |
+| `results/exp04/{pair}/gamma_summary.json` | mean_gamma per behavior, asymmetry_index |
+| `results/exp04/{pair}/gamma_plot.png` | gamma_l vs layer depth, colored by safety class |
+| `results/exp04/cross_pair_summary.json` | asymmetry index across all pairs |
+
+### Key flags
+
+| Flag | Default | Description |
+|---|---|---|
+| `--pairs` | all in config | Specific pair keys to run |
+| `--families` / `--tiers` | all | Filter pairs |
+| `--alphas` | `0.1 0.2 … 3.0` | Alpha sweep — fine resolution below 1.0 needed to catch base model ceilings |
+| `--window-min` / `--window-max` | `0.4` / `0.8` | Layer depth window |
+| `--skip-existing` | off | Skip pairs with existing gamma_summary.json |
 
 ---
 

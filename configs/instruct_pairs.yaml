@@ -1,0 +1,66 @@
+# Base ↔ Instruct model pairs for Exp 04 attractor amplification study.
+#
+# For each pair, Exp 04 runs the ceiling sweep on both variants using the
+# SAME behavioral vectors (extracted from the base model via Exp 02) and
+# computes gamma_l = alpha_eff^IT / alpha_eff^base per layer per behavior.
+#
+# Prediction:
+#   gamma_l(unsafe direction) >> 1   — RLHF resists steering toward unsafe outputs
+#   gamma_l(safe direction)   ≈ 1    — RLHF does not resist steering toward safe outputs
+#   gamma_l(neutral direction) ≈ 1   — RLHF indifferent to non-safety directions
+#
+# If this asymmetry holds, gamma_l(unsafe)/gamma_l(safe) is a quantitative
+# safety metric: how directionally biased the safety training is.
+
+pairs:
+  # ── Llama ────────────────────────────────────────────────────────────
+  llama-3.2-1b:
+    base:    "meta-llama/Llama-3.2-1B"
+    instruct: "meta-llama/Llama-3.2-1B-Instruct"
+    family:  "llama"
+    tier:    "small"
+
+  llama-3.2-3b:
+    base:    "meta-llama/Llama-3.2-3B"
+    instruct: "meta-llama/Llama-3.2-3B-Instruct"
+    family:  "llama"
+    tier:    "small"
+
+  llama-3.1-8b:
+    base:    "meta-llama/Llama-3.1-8B"
+    instruct: "meta-llama/Llama-3.1-8B-Instruct"
+    family:  "llama"
+    tier:    "medium"
+
+  # ── Qwen2.5 ──────────────────────────────────────────────────────────
+  qwen2.5-3b:
+    base:    "Qwen/Qwen2.5-3B"
+    instruct: "Qwen/Qwen2.5-3B-Instruct"
+    family:  "qwen2"
+    tier:    "small"
+
+  qwen2.5-7b:
+    base:    "Qwen/Qwen2.5-7B"
+    instruct: "Qwen/Qwen2.5-7B-Instruct"
+    family:  "qwen2"
+    tier:    "medium"
+
+  # ── Gemma 2 ──────────────────────────────────────────────────────────
+  gemma-2-2b:
+    base:    "google/gemma-2-2b"
+    instruct: "google/gemma-2-2b-it"
+    family:  "gemma2"
+    tier:    "small"
+
+  gemma-2-9b:
+    base:    "google/gemma-2-9b"
+    instruct: "google/gemma-2-9b-it"
+    family:  "gemma2"
+    tier:    "medium"
+
+  # ── Mistral ───────────────────────────────────────────────────────────
+  mistral-7b:
+    base:    "mistralai/Mistral-7B-v0.1"
+    instruct: "mistralai/Mistral-7B-Instruct-v0.3"
+    family:  "mistral"
+    tier:    "medium"
