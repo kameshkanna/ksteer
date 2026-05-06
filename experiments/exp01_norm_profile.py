@@ -15,10 +15,10 @@ Usage:
         --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b \\
         --run-ceiling-sweep
 
-    # Multi-layer ceiling sweep at 30%, 50%, 70%, 90% depth
+    # Ceiling sweep across the 40-80% steering window (5 points)
     python experiments/exp01_norm_profile.py \\
         --model google/gemma-2-2b --model-name gemma-2-2b \\
-        --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9
+        --run-ceiling-sweep --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8
 """
 
 import argparse
@@ -80,8 +80,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--output-dir", default="results/exp01", type=str)
     p.add_argument("--run-ceiling-sweep", action="store_true",
                    help="Run alpha × K_l sweep to empirically confirm the coherence ceiling")
-    p.add_argument("--sweep-layer-pcts", nargs="+", type=float, default=[0.6],
-                   help="Layer depths (as fractions) at which to run the ceiling sweep. Default: 0.6")
+    p.add_argument("--sweep-layer-pcts", nargs="+", type=float,
+                   default=[0.4, 0.5, 0.6, 0.7, 0.8],
+                   help="Layer depths (as fractions) at which to run the ceiling sweep (default: 40-80%% window)")
     p.add_argument("--sweep-prompt", default="Tell me something interesting about the history of science.",
                    type=str)
     p.add_argument("--sweep-max-tokens", default=80, type=int)
@@ -135,7 +136,7 @@ def main() -> None:
 
     logger.info("=== Step 1b: Ceiling sweep ===")
     sweep_layers = sorted({
-        max(0, min(profile.num_layers - 1, int(pct * profile.num_layers)))
+        max(0, min(profile.num_layers - 1, round(pct * (profile.num_layers - 1))))
         for pct in args.sweep_layer_pcts
     })
     logger.info("Sweep layers: %s", sweep_layers)

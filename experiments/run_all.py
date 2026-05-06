@@ -13,7 +13,7 @@ Single-model equivalents:
 
 Batch usage:
     python experiments/run_all.py --tiers small medium --skip-existing
-    python experiments/run_all.py --tiers small medium --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9 --skip-existing
+    python experiments/run_all.py --tiers small medium --run-ceiling-sweep --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8 --skip-existing
     python experiments/run_all.py --tiers small medium --run-exp02 --skip-existing
     python experiments/run_all.py --tiers small medium --run-exp02 --run-formula-validation --skip-existing
     python experiments/run_all.py --tiers small medium --run-ceiling-sweep --run-exp02 --run-formula-validation --skip-existing
@@ -66,7 +66,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--run-ceiling-sweep", action="store_true",
                    help="Run alpha×K_l ceiling sweep during Exp 01")
     p.add_argument("--sweep-layer-pcts", nargs="+", type=float,
-                   default=[0.3, 0.5, 0.7, 0.9])
+                   default=[0.4, 0.5, 0.6, 0.7, 0.8],
+                   help="Layer depths for Exp 01 ceiling sweep (default: 40-80%% steering window)")
 
     # ── Exp 02 flags ─────────────────────────────────────────────────────────
     p.add_argument("--run-exp02", action="store_true",

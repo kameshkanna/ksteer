@@ -155,7 +155,7 @@ python experiments/audit_architecture.py --model <model_id>
 ```
 
 ```bash
-python experiments/exp01_norm_profile.py --model <model_id> --model-name <name> --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9
+python experiments/exp01_norm_profile.py --model <model_id> --model-name <name> --run-ceiling-sweep --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8
 ```
 
 ```bash
@@ -174,7 +174,7 @@ Example — Llama-3.2-1B:
 
 ```bash
 python experiments/audit_architecture.py --model meta-llama/Llama-3.2-1B
-python experiments/exp01_norm_profile.py --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9
+python experiments/exp01_norm_profile.py --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b --run-ceiling-sweep --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8
 python experiments/exp02_contrastive_vectors.py --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b
 python experiments/exp02_formula_validation.py --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b --exp01-dir results/exp01 --exp02-dir results/exp02
 python experiments/exp03_formula_calibration.py --models llama-3.2-1b
@@ -206,19 +206,19 @@ python experiments/exp01_norm_profile.py --model meta-llama/Llama-3.2-1B --model
 ### Run — single model, profile + ceiling sweep at multiple depths (recommended)
 
 ```bash
-python experiments/exp01_norm_profile.py --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9
+python experiments/exp01_norm_profile.py --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b --run-ceiling-sweep --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8
 ```
 
 ### Run — all small models in batch
 
 ```bash
-python experiments/run_all.py --tiers small --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9 --skip-existing
+python experiments/run_all.py --tiers small --run-ceiling-sweep --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8 --skip-existing
 ```
 
 ### Run — specific models by key
 
 ```bash
-python experiments/run_all.py --models gemma-2-2b qwen2.5-1.5b --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9
+python experiments/run_all.py --models gemma-2-2b qwen2.5-1.5b --run-ceiling-sweep --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8
 ```
 
 ### Run — cross-model comparison plot (after profiling ≥2 models)
@@ -238,7 +238,7 @@ Outputs `comparison_norm_profiles.png`, `comparison_k_table.json`, and `comparis
 | `--batch-size` | 4 | Batch size for profiling forward passes |
 | `--max-length` | 256 | Tokenization truncation length |
 | `--run-ceiling-sweep` | off | Enable the alpha×K_l coherence sweep |
-| `--sweep-layer-pcts` | `0.6` | Layer depths (as fractions) to sweep |
+| `--sweep-layer-pcts` | `0.4 0.5 0.6 0.7 0.8` | Layer depths for the ceiling sweep (default: 40–80% window) |
 | `--output-dir` | `results/exp01` | Where to write results |
 | `--device` | auto | `cuda`, `cpu`, or leave blank for auto |
 
@@ -513,7 +513,7 @@ Outputs `results/cross_family_summary.json` and `results/cross_family_summary.md
 | Flag | Description |
 |---|---|
 | `--run-ceiling-sweep` | Include alpha×K_l sweep in Exp 01 |
-| `--sweep-layer-pcts` | Layer depths for the Exp 01 sweep (default: `0.3 0.5 0.7 0.9`) |
+| `--sweep-layer-pcts` | Layer depths for the Exp 01 ceiling sweep (default: 40–80% window) |
 | `--run-exp02` | Run Exp 02 contrastive extraction after Exp 01 |
 | `--run-formula-validation` | Run Exp 02b formula validation after Exp 02 |
 | `--val-alphas` | Alpha values for the validation sweep |
