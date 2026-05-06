@@ -148,6 +148,8 @@ def calibrate_behavior(
     profile: dict,
     bvec_meta: dict,
     formula_summary: dict,
+    window_min: float = 0.4,
+    window_max: float = 0.8,
 ) -> Optional[BehaviorCalibration]:
     behavior_data = formula_summary.get(behavior)
     if behavior_data is None:
@@ -170,6 +172,9 @@ def calibrate_behavior(
         layer_idx = int(layer_str)
         if layer_idx >= num_layers:
             continue
+        layer_pct = layer_idx / num_layers
+        if not (window_min <= layer_pct <= window_max):
+            continue   # outside steering window — early/late layers collapse independently
         cal = compute_layer_calibration(
             layer_idx=layer_idx,
             num_layers=num_layers,
@@ -344,6 +349,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--output-dir", default="results/exp03")
     p.add_argument("--models", nargs="+", default=None,
                    help="Specific model keys to analyse (default: all found in exp02-dir)")
+    p.add_argument("--window-min", type=float, default=0.4,
+                   help="Minimum layer depth fraction to include (default: 0.4 = 40%%)")
+    p.add_argument("--window-max", type=float, default=0.8,
+                   help="Maximum layer depth fraction to include (default: 0.8 = 80%%)")
     return p.parse_args()
 
 
@@ -371,6 +380,7 @@ def main() -> None:
         return
 
     logger.info("Models to calibrate: %s", model_names)
+    logger.info("Steering window: %.0f%%–%.0f%% layer depth", args.window_min * 100, args.window_max * 100)
 
     # cross-model summary: model → aggregated stats
     cross_model: Dict[str, dict] = {}
@@ -400,7 +410,10 @@ def main() -> None:
                 logger.warning("  vectors_meta.json not found for behavior=%s — skipping", behavior)
                 continue
 
-            cal = calibrate_behavior(behavior, model_name, profile, bvec_meta, formula_summary)
+            cal = calibrate_behavior(
+                behavior, model_name, profile, bvec_meta, formula_summary,
+                window_min=args.window_min, window_max=args.window_max,
+            )
             if cal is None:
                 continue
 
@@ -441,6 +454,7 @@ def main() -> None:
 
         model_summary = {
             "model_name": model_name,
+            "steering_window": [args.window_min, args.window_max],
             "num_behaviors": len(model_calibrations),
             "num_calibrated_layers": len(all_ratios),
             "grand_mean_ratio": round(grand_mean, 4),

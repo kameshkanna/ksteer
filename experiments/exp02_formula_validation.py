@@ -25,10 +25,10 @@ Usage:
         --exp01-dir results/exp01 \\
         --exp02-dir results/exp02
 
-    # Fewer sweep layers, faster run
+    # Fewer sweep layers (still within the 40-80% window)
     python experiments/exp02_formula_validation.py \\
         --model meta-llama/Llama-3.2-1B --model-name llama-3.2-1b \\
-        --sweep-layer-pcts 0.2 0.4 0.6 0.8 \\
+        --sweep-layer-pcts 0.4 0.5 0.6 0.7 0.8 \\
         --behaviors sycophancy refusal
 """
 
@@ -67,8 +67,8 @@ def parse_args() -> argparse.Namespace:
                    help="Output dir (default: {exp02-dir}/{model-name}/formula_validation)")
     p.add_argument(
         "--sweep-layer-pcts", nargs="+", type=float,
-        default=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-        help="Layer depths as fractions to test the formula at. 1.0 resolves to the last layer.",
+        default=[0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+        help="Layer depths as fractions to test the formula at (default: 40-80%% steering window).",
     )
     p.add_argument(
         "--sweep-all-layers", action="store_true",

@@ -83,8 +83,8 @@ def parse_args() -> argparse.Namespace:
                    default=[0.05, 0.1, 0.15, 0.2, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0],
                    help="Alpha sweep values for formula validation")
     p.add_argument("--val-sweep-layer-pcts", nargs="+", type=float,
-                   default=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-                   help="Layer depth fractions for formula validation sweep")
+                   default=[0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+                   help="Layer depth fractions for formula validation sweep (default: 40-80%% steering window)")
 
     # ── Run control ──────────────────────────────────────────────────────────
     p.add_argument("--skip-existing", action="store_true",

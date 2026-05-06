@@ -419,8 +419,8 @@ python experiments/run_all.py --tiers small medium --run-exp02 --run-formula-val
 | `--model-name` | last part of model ID | Must match the name used in Exp 01 and 02 |
 | `--exp01-dir` | `results/exp01` | Directory containing Exp 01 norm profiles |
 | `--exp02-dir` | `results/exp02` | Directory containing Exp 02 behavioral vectors |
-| `--sweep-layer-pcts` | `0.1 0.2 … 1.0` | Layer depths as fractions (1.0 = last layer) |
-| `--sweep-all-layers` | off | Test every layer instead of sampled depths |
+| `--sweep-layer-pcts` | `0.4 0.45 … 0.8` | Layer depths as fractions — default is the 40–80% steering window |
+| `--sweep-all-layers` | off | Test every single layer (overrides --sweep-layer-pcts) |
 | `--alphas` | `0.25 0.5 … 3.0` | Alpha multipliers of K_l to sweep |
 | `--behaviors` | all found in exp02-dir | Specific behaviors to validate |
 
@@ -471,6 +471,8 @@ python experiments/exp03_formula_calibration.py --models llama-3.2-1b qwen2.5-1.
 | `--exp02-dir` | `results/exp02` | Vectors + formula validation directory |
 | `--output-dir` | `results/exp03` | Output directory |
 | `--models` | all found | Model name keys to process |
+| `--window-min` | `0.4` | Minimum layer depth fraction (default: 40%) |
+| `--window-max` | `0.8` | Maximum layer depth fraction (default: 80%) |
 
 ---
 
@@ -515,7 +517,7 @@ Outputs `results/cross_family_summary.json` and `results/cross_family_summary.md
 | `--run-exp02` | Run Exp 02 contrastive extraction after Exp 01 |
 | `--run-formula-validation` | Run Exp 02b formula validation after Exp 02 |
 | `--val-alphas` | Alpha values for the validation sweep |
-| `--val-sweep-layer-pcts` | Layer depths for the validation sweep |
+| `--val-sweep-layer-pcts` | Layer depths for the validation sweep (default: 40–80% window) |
 
 ### Control flags
 
