@@ -142,19 +142,21 @@ def find_behaviors(exp02_dir: Path, model_name: str, requested: Optional[List[st
 
 # ── Core: ceiling sweep for a single model ────────────────────────────────────
 
-def run_ceiling_sweep_for_model(
+def run_ceiling_for_model(
     model_id: str,
     profile: NormProfile,
     bvec: BehavioralVector,
     sweep_layers: List[int],
-    alphas: List[float],
+    bisect_lo: float,
+    bisect_hi: float,
+    bisect_tol: float,
     sweep_prompt: str,
     sweep_max_tokens: int,
     device: Optional[str],
 ) -> Dict[int, Optional[float]]:
     """
-    Load model, sweep alpha × K_l at each layer using the given behavioral vector,
-    return {layer_idx: alpha_eff} (None if coherent at all tested alphas).
+    Load model, bisect-search the coherence ceiling at each layer using the
+    given behavioral vector, return {layer_idx: alpha_eff}.
     Model is unloaded and GPU memory purged before returning.
     """
     model, tokenizer = load_model(model_id, device=device)
@@ -163,24 +165,16 @@ def run_ceiling_sweep_for_model(
     ceiling_by_layer: Dict[int, Optional[float]] = {}
     for layer_idx in sweep_layers:
         v = bvec.get_vector(layer_idx)
-        results = sweeper.sweep(
+        ceiling, _ = sweeper.find_ceiling(
             prompt=sweep_prompt,
             steering_vector=v,
             layer_idx=layer_idx,
-            alphas=alphas,
+            lo=bisect_lo,
+            hi=bisect_hi,
+            tolerance=bisect_tol,
             max_new_tokens=sweep_max_tokens,
         )
-        ceiling = None
-        for r in results:
-            if not r.is_coherent:
-                ceiling = r.alpha
-                break
         ceiling_by_layer[layer_idx] = ceiling
-        pct = layer_idx / profile.num_layers
-        if ceiling is not None:
-            logger.info("  L%d (%.0f%%)  alpha_eff=%.3f × K_l", layer_idx, 100 * pct, ceiling)
-        else:
-            logger.info("  L%d (%.0f%%)  alpha_eff>%.3f (all coherent)", layer_idx, 100 * pct, max(alphas))
 
     del model, tokenizer, sweeper
     gc.collect()
@@ -356,9 +350,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--behaviors", nargs="+", default=None)
     p.add_argument("--window-min", type=float, default=0.4)
     p.add_argument("--window-max", type=float, default=0.8)
-    p.add_argument("--alphas", nargs="+", type=float,
-                   default=[0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 2.5, 3.0],
-                   help="Alpha sweep values — include fine resolution below 1.0 to catch base model ceilings")
+    p.add_argument("--bisect-lo", type=float, default=0.05,
+                   help="Bisection lower bound alpha (default: 0.05)")
+    p.add_argument("--bisect-hi", type=float, default=3.0,
+                   help="Bisection upper bound alpha — must be > expected instruct ceiling (default: 3.0)")
+    p.add_argument("--bisect-tol", type=float, default=0.05,
+                   help="Bisection stopping tolerance (default: 0.05)")
     p.add_argument("--sweep-prompt",
                    default="Tell me something interesting about the history of science.",
                    type=str)
@@ -490,27 +487,31 @@ def main() -> None:
             logger.info("  --- behavior: %s (class: %s) ---",
                         behavior, BEHAVIOR_SAFETY_CLASS.get(behavior, "neutral"))
 
-            # Sweep base model
-            logger.info("  Sweeping base: %s", base_id)
-            base_ceilings = run_ceiling_sweep_for_model(
+            # Bisect base model
+            logger.info("  Bisecting base: %s", base_id)
+            base_ceilings = run_ceiling_for_model(
                 model_id=base_id,
                 profile=base_profile,
                 bvec=bvec,
                 sweep_layers=sweep_layers,
-                alphas=args.alphas,
+                bisect_lo=args.bisect_lo,
+                bisect_hi=args.bisect_hi,
+                bisect_tol=args.bisect_tol,
                 sweep_prompt=args.sweep_prompt,
                 sweep_max_tokens=args.sweep_max_tokens,
                 device=args.device,
             )
 
-            # Sweep instruct model using same vector
-            logger.info("  Sweeping instruct: %s", it_id)
-            it_ceilings = run_ceiling_sweep_for_model(
+            # Bisect instruct model using same vector
+            logger.info("  Bisecting instruct: %s", it_id)
+            it_ceilings = run_ceiling_for_model(
                 model_id=it_id,
                 profile=it_profile,
                 bvec=bvec,
                 sweep_layers=sweep_layers,
-                alphas=args.alphas,
+                bisect_lo=args.bisect_lo,
+                bisect_hi=args.bisect_hi,
+                bisect_tol=args.bisect_tol,
                 sweep_prompt=args.sweep_prompt,
                 sweep_max_tokens=args.sweep_max_tokens,
                 device=args.device,

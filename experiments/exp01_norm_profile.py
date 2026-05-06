@@ -79,13 +79,19 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--max-length", default=256, type=int)
     p.add_argument("--output-dir", default="results/exp01", type=str)
     p.add_argument("--run-ceiling-sweep", action="store_true",
-                   help="Run alpha × K_l sweep to empirically confirm the coherence ceiling")
+                   help="Run bisection ceiling search to empirically confirm the K_l ceiling")
     p.add_argument("--sweep-layer-pcts", nargs="+", type=float,
                    default=[0.4, 0.5, 0.6, 0.7, 0.8],
-                   help="Layer depths (as fractions) at which to run the ceiling sweep (default: 40-80%% window)")
+                   help="Layer depths (as fractions) at which to run the ceiling search (default: 40-80%% window)")
+    p.add_argument("--bisect-lo", type=float, default=0.05,
+                   help="Bisection lower bound alpha (default: 0.05)")
+    p.add_argument("--bisect-hi", type=float, default=3.0,
+                   help="Bisection upper bound alpha (default: 3.0)")
+    p.add_argument("--bisect-tol", type=float, default=0.05,
+                   help="Bisection stopping tolerance (default: 0.05)")
     p.add_argument("--sweep-prompt", default="Tell me something interesting about the history of science.",
                    type=str)
-    p.add_argument("--sweep-max-tokens", default=80, type=int)
+    p.add_argument("--sweep-max-tokens", default=60, type=int)
     p.add_argument("--seed", default=42, type=int)
     return p.parse_args()
 
@@ -147,44 +153,49 @@ def main() -> None:
     v_random = torch.randn(profile.hidden_dim)
 
     sweeper = CeilingSweeper(model, tokenizer, profile)
-    all_sweep_results = sweeper.sweep_multiple_layers(
+    all_sweep_results = sweeper.find_ceiling_multiple_layers(
         prompt=args.sweep_prompt,
         steering_vector=v_random,
         layer_indices=sweep_layers,
+        lo=args.bisect_lo,
+        hi=args.bisect_hi,
+        tolerance=args.bisect_tol,
         max_new_tokens=args.sweep_max_tokens,
     )
 
-    # Save raw results
+    # Save results: {layer_idx: {ceiling_alpha, probes[]}}
     sweep_data = {
-        str(layer_idx): [r.to_dict() for r in results]
-        for layer_idx, results in all_sweep_results.items()
+        str(layer_idx): {
+            "ceiling_alpha": ceiling,
+            "probes": [r.to_dict() for r in probes],
+        }
+        for layer_idx, (ceiling, probes) in all_sweep_results.items()
     }
     sweep_path = out / "ceiling_sweep.json"
     with open(sweep_path, "w") as f:
         json.dump(sweep_data, f, indent=2)
     logger.info("Ceiling sweep → %s", sweep_path)
 
-    # Per-layer plots
-    for layer_idx, results in all_sweep_results.items():
-        coherent_alphas = [r.alpha for r in results if r.is_coherent]
-        incoherent_alphas = [r.alpha for r in results if not r.is_coherent]
-        if incoherent_alphas:
+    # Per-layer summary and plots
+    for layer_idx, (ceiling, probes) in all_sweep_results.items():
+        if ceiling is not None:
             logger.info(
-                "Layer %d (%.0f%%): ceiling confirmed at α ≈ %.2f × K_l",
-                layer_idx, 100 * layer_idx / profile.num_layers, min(incoherent_alphas),
+                "Layer %d (%.0f%%): ceiling = %.3f × K_l",
+                layer_idx, 100 * layer_idx / profile.num_layers, ceiling,
             )
         else:
             logger.info(
-                "Layer %d (%.0f%%): coherent at all tested alphas (max=%.2f) — ceiling may be higher",
+                "Layer %d (%.0f%%): coherent up to hi=%.2f — ceiling > %.2f",
                 layer_idx, 100 * layer_idx / profile.num_layers,
-                max(r.alpha for r in results),
+                args.bisect_hi, args.bisect_hi,
             )
-        plot_ceiling_sweep(results, model_name, output_path=out / f"ceiling_sweep_L{layer_idx}.png")
+        plot_ceiling_sweep(probes, model_name, output_path=out / f"ceiling_sweep_L{layer_idx}.png")
 
     # Multi-layer heatmap if more than one layer was swept
     if len(sweep_layers) > 1:
+        probes_by_layer = {idx: probes for idx, (_, probes) in all_sweep_results.items()}
         plot_multi_layer_ceiling(
-            all_sweep_results, model_name, profile.num_layers,
+            probes_by_layer, model_name, profile.num_layers,
             output_path=out / "ceiling_heatmap.png",
         )
 

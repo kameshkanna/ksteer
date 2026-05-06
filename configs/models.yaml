@@ -1,10 +1,8 @@
 models:
   # ── Llama family ────────────────────────────────────────────────────
-  # Architecture: pre-norm only (RMSNorm before each sub-layer), GQA, SwiGLU, RoPE.
-  # Consistent pattern preserved across all sizes → K_l is scale-invariant.
-  # Empirical: K_l ≈ 1.0–1.4 from 1B to 70B (Win.Mean range).
-  # Instruction-tuned variants (Instruct) show higher effective K — need more
-  # steering magnitude to break coherence due to RLHF attractor strengthening.
+  # Architecture: pre-norm only (RMSNorm + GQA + SwiGLU + RoPE), consistent
+  # across all sizes → K_l approximately scale-invariant (Win.Mean 1.0–1.4).
+  # Instruction-tuned variants require higher effective K (RLHF attractor strengthening).
   llama-3.2-1b:
     model_id: "meta-llama/Llama-3.2-1B"
     family: "llama"
@@ -20,35 +18,11 @@ models:
     family: "llama"
     tier: "medium"
 
-  llama-3.1-70b:
-    model_id: "meta-llama/Llama-3.1-70B"
-    family: "llama"
-    tier: "large"
-
-  # ── Mistral family ──────────────────────────────────────────────────
-  # NOT scale-invariant — architecture differs significantly between variants.
-  # Mistral-7B v0.1: 32 layers, hidden 4096, sliding window attention (4096 tokens).
-  # Mistral-Nemo-12B: 40 layers, hidden 5120, 128K context, co-developed with NVIDIA.
-  # Different depth, width, and attention mechanisms → treat each variant as its own family.
-  # Empirical: K_l = 0.52 (7B) vs 1.95 (Nemo-12B) — do not share K_l across Mistral variants.
-  mistral-7b:
-    model_id: "mistralai/Mistral-7B-v0.1"
-    family: "mistral"
-    tier: "medium"
-
-  mistral-nemo-12b:
-    model_id: "mistralai/Mistral-Nemo-Base-2407"
-    family: "mistral"
-    tier: "medium"
-
   # ── Qwen2.5 family ──────────────────────────────────────────────────
-  # NOT scale-invariant — Qwen2.5 uses different architectural configurations
-  # per size rather than a consistent scaling law.
-  # 3B: 36 layers, hidden 3072, intermediate 12288, 16 query heads, 2 KV heads.
-  # 7B: 28 layers, hidden 3584, intermediate 18944, 28 query heads, 4 KV heads.
-  # The 3B has MORE layers but SMALLER hidden dim than the 7B — non-uniform scaling.
-  # Empirical: K_l = 11.4 (3B) vs 28.6 (7B). Profile each size independently.
-  # Instruction-tuned variants (Instruct) require significantly higher K to break.
+  # NOT scale-invariant — different hidden_dim + layer counts per size.
+  # 3B: 36 layers, hidden 3072, intermediate 12288 → K_l ≈ 11.4
+  # 7B: 28 layers, hidden 3584, intermediate 18944 → K_l ≈ 28.6
+  # Profile each size independently. Instruct variants need significantly higher K.
   qwen2.5-3b:
     model_id: "Qwen/Qwen2.5-3B"
     family: "qwen2"
@@ -60,13 +34,10 @@ models:
     tier: "medium"
 
   # ── Gemma 2 family ──────────────────────────────────────────────────
-  # Architecture: pre-norm + post-norm on every sub-layer (double RMSNorm).
-  # Formula: h_{l+1} = h_l + PostNorm(SubLayer(PreNorm(h_l)))
-  # The post-norm constrains sub-layer outputs to unit scale before residual add,
-  # causing the residual stream to accumulate larger absolute norms than pre-norm-only
-  # architectures. This is architectural, not a training artifact.
-  # Empirical: K_l ≈ 9.35–9.39 from 2B to 9B (0.4% gap) — strongly scale-invariant
-  # because both sizes use the same double-norm pattern with consistent epsilon (1e-6).
+  # Double-norm: h_{l+1} = h_l + PostNorm(SubLayer(PreNorm(h_l)))
+  # Post-norm clamps sub-layer output to unit scale before residual add →
+  # residual norms accumulate faster → K_l ≈ 9.37, strongly scale-invariant
+  # (2B vs 9B differ by 0.4%). Architecture is identical across both sizes.
   gemma-2-2b:
     model_id: "google/gemma-2-2b"
     family: "gemma2"

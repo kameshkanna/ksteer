@@ -74,11 +74,12 @@ def parse_args() -> argparse.Namespace:
         "--sweep-all-layers", action="store_true",
         help="Test every single layer instead of depth percentages. Slow but complete.",
     )
-    p.add_argument(
-        "--alphas", nargs="+", type=float,
-        default=[0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 2.5, 3.0],
-        help="Alpha multipliers of K_l to sweep",
-    )
+    p.add_argument("--bisect-lo", type=float, default=0.05,
+                   help="Bisection lower bound alpha (default: 0.05)")
+    p.add_argument("--bisect-hi", type=float, default=3.0,
+                   help="Bisection upper bound alpha (default: 3.0)")
+    p.add_argument("--bisect-tol", type=float, default=0.05,
+                   help="Bisection stopping tolerance (default: 0.05)")
     p.add_argument(
         "--behaviors", nargs="+", default=None,
         help="Specific behaviors to validate (default: all found in exp02-dir)",
@@ -118,7 +119,7 @@ def find_behaviors(exp02_model_dir: Path, requested: Optional[List[str]]) -> Lis
     )
 
 
-def empirical_ceiling_alpha(results) -> float | None:
+def empirical_ceiling_alpha(results: list) -> Optional[float]:
     """First alpha where coherence breaks, or None if coherent at all tested alphas."""
     for r in results:
         if not r.is_coherent:
@@ -175,14 +176,16 @@ def main() -> None:
 
         for layer_idx in sweep_layers:
             v = bvec.get_vector(layer_idx)
-            results = sweeper.sweep(
+            ceiling, probes = sweeper.find_ceiling(
                 prompt=args.sweep_prompt,
                 steering_vector=v,
                 layer_idx=layer_idx,
-                alphas=args.alphas,
+                lo=args.bisect_lo,
+                hi=args.bisect_hi,
+                tolerance=args.bisect_tol,
                 max_new_tokens=args.sweep_max_tokens,
             )
-            ceiling = empirical_ceiling_alpha(results)
+            results = probes
             behavior_ceilings[layer_idx] = ceiling
 
             layer_pct = layer_idx / profile.num_layers
