@@ -18,7 +18,7 @@ For a transformer with hidden dimension `d`, the residual stream at layer `l` ha
 K_l = mean_norm_l / sqrt(d)
 ```
 
-Injecting a unit vector scaled to `alpha × K_l × sqrt(d)` causes gibberish when `alpha > 1`. K_l is architecture-dependent — it varies **64×** across families — but is **scale-invariant within a family**: Llama-3.2-1B and Llama-3.1-70B differ by 0.02% across a 70× parameter gap.
+Injecting a unit vector scaled to `alpha × K_l × sqrt(d)` causes gibberish when `alpha > 1`. K_l is architecture-dependent — it varies **55×** across families (Mistral-7B: 0.52 → Qwen2.5-7B: 28.55) — and is **scale-invariant only in families with consistent architecture**: Gemma-2 (0.4% gap across 2B→9B) and Llama-3 (~35% spread across 1B→70B). Mistral and Qwen2.5 are NOT scale-invariant — each size must be profiled independently.
 
 The generalized formula accounts for behavioral signal strength:
 
@@ -39,12 +39,21 @@ K_l^b = K_l / rho_l    where rho_l = ||mean_diff_l|| / mean_norm_l
 | Llama-3.2-1B | llama | 1.0376 | 1.0899 | 1.1905 | 1.0827 |
 | Llama-3.2-3B | llama | 1.2480 | 1.3499 | 1.5607 | 1.3613 |
 | Mistral-Nemo-12B | mistral | 1.4902 | 1.9754 | 2.6356 | 1.9538 |
-| Gemma-2-2B | gemma2 | 6.6409 | 9.8668 | 12.7469 | 9.3481 |
+| Gemma-2-2B | gemma2 | 6.6409 | 9.8669 | 12.7469 | 9.3481 |
 | Gemma-2-9B | gemma2 | 7.8141 | 9.5762 | 12.1864 | 9.3892 |
-| Qwen2.5-1.5B | qwen2 | — | — | — | ~33.42 |
-| Qwen2.5-7B | qwen2 | — | — | — | ~28.55 |
+| Qwen2.5-3B | qwen2 | 10.9222 | 11.4727 | 12.3698 | 11.4311 |
+| Qwen2.5-7B | qwen2 | 27.7858 | 28.4754 | 29.9449 | 28.5528 |
 
 Win.Mean = mean K_l over the 40–80% steering window. Practical steering range: `alpha = 0.2–0.3 × K_l`.
+
+**Family constants** (Win.Mean averaged across models in family):
+
+| Family | Win.Mean K | Scale-invariant? | Note |
+|---|---|---|---|
+| gemma2 | 9.37 | ✓ Yes (0.4% gap) | Double-norm architecture |
+| llama | 1.15 | ✓ Approximately | Pre-norm, consistent pattern |
+| mistral | 1.24 | ✗ No | 7B ≠ Nemo-12B architecture |
+| qwen2 | — | ✗ No | 3B ≠ 7B (non-uniform scaling) |
 
 ---
 
@@ -541,7 +550,7 @@ Models are defined in `configs/models.yaml`. Add new entries there to include th
 | `llama-3.1-70b` | `meta-llama/Llama-3.1-70B` | llama | large |
 | `mistral-7b` | `mistralai/Mistral-7B-v0.1` | mistral | medium |
 | `mistral-nemo-12b` | `mistralai/Mistral-Nemo-Base-2407` | mistral | medium |
-| `qwen2.5-1.5b` | `Qwen/Qwen2.5-1.5B` | qwen2 | small |
+| `qwen2.5-3b` | `Qwen/Qwen2.5-3B` | qwen2 | small |
 | `qwen2.5-7b` | `Qwen/Qwen2.5-7B` | qwen2 | medium |
 | `gemma-2-2b` | `google/gemma-2-2b` | gemma2 | small |
 | `gemma-2-9b` | `google/gemma-2-9b` | gemma2 | medium |
@@ -552,13 +561,27 @@ Tier definitions: `small` = <4B params, `medium` = 4–15B, `large` = >15B.
 
 ## Architecture Notes
 
-**Llama-3 / Mistral-7B**: Pre-norm only (RMSNorm before each sub-layer). Clean residual stream growth. K_l ≈ 1.08 for Llama-3 (scale-invariant across 1B–70B), K_l ≈ 0.52 for Mistral-7B. Use `alpha = 0.2–0.3 × K_l` for clean behavioral steering.
+### Llama 3 (1B / 3B / 8B / 70B)
+Pre-norm only: `h_{l+1} = h_l + SubLayer(RMSNorm(h_l))`. The same architectural pattern — GQA, SwiGLU, RoPE, RMSNorm — is preserved consistently across all Llama 3 sizes. This structural consistency is why K_l is approximately scale-invariant (Win.Mean 1.008–1.361 from 1B to 8B, confirmed ~1.08 at 70B). Profile any one Llama-3 size and the K_l budget applies across the family within ~35%.
 
-**Mistral-Nemo-12B**: Different architecture variant from Mistral-7B — K_l is NOT constant across Mistral variants. Profile each Mistral variant separately; do not share K_l values between them.
+### Gemma 2 (2B / 9B)
+Double-norm: `h_{l+1} = h_l + PostNorm(SubLayer(PreNorm(h_l)))`. RMSNorm is applied both before and after every sub-layer (attention and MLP). The post-norm clamps each sub-layer's output to unit scale before the residual add, causing residual norms to accumulate much faster than in pre-norm-only architectures. K_l ≈ 9.37 — stable to 0.4% between 2B and 9B because both use the identical double-norm scheme with the same epsilon (1e-6). Do not share K_l budgets with Llama or Mistral.
 
-**Gemma-2**: Pre-norm + post-norm on each sub-layer output before the residual add. This inflates the residual stream norm significantly. K_l ≈ 9.37 (18× higher than Llama at the same depth). K_l is stable across Gemma-2-2B and 9B (0.4% difference). This is a real architectural property, not a measurement artifact.
+### Qwen2.5 (3B / 7B)
+**Not scale-invariant.** Qwen2.5 does not use a consistent architectural scaling law across sizes:
 
-**Qwen2.5**: Pre-norm like Llama but trained with a large weight scale. K_l ≈ 30–33 (60× higher than Mistral-7B). Scale-invariant within the Qwen2.5 family. Behavioral vectors break coherence at `alpha_eff ≈ 0.16–0.25` — significantly lower than K_l predicts for random vectors.
+| Size | Layers | Hidden | Intermediate | K_l (Win.Mean) |
+|---|---|---|---|---|
+| 3B | 36 | 3072 | 12288 | 11.43 |
+| 7B | 28 | 3584 | 18944 | 28.55 |
+
+The 3B has more layers but a smaller hidden dim than the 7B — non-uniform scaling that makes K_l vary 2.5× within the family. Profile each Qwen2.5 size independently; do not share K_l values across sizes.
+
+### Mistral-7B v0.1 vs Mistral-Nemo-12B
+**Not scale-invariant — fundamentally different architectures.** Mistral-7B (32 layers, hidden 4096, sliding window attention 4096 tokens, K_l = 0.52) vs Mistral-Nemo-12B (40 layers, hidden 5120, 128K context window, co-developed with NVIDIA, K_l = 1.95). These are distinct architectures that happen to share the Mistral name. Treat each as its own family for K_l purposes.
+
+### Instruction-Tuned vs Base Models
+Empirically, instruction-tuned variants (SFT + RLHF) require **significantly higher steering magnitude to break coherence** than their base counterparts. The mechanism: RLHF reinforces specific output attractors in the residual stream, increasing the behavioral SNR (ρ_l) for safety-relevant directions. In the K_l^b = K_l / ρ_l framework, higher ρ_l means a tighter behavior-calibrated ceiling — more magnitude is needed to escape the safe basin. Always profile the exact variant you intend to steer (base vs instruct); K_l does not transfer between them.
 
 ---
 
