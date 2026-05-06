@@ -51,7 +51,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--models", nargs="+", default=None,
                    help="Specific model keys from config. Runs all if omitted.")
     p.add_argument("--families", nargs="+", default=None,
-                   help="Filter by family: llama mistral qwen2 gemma2")
+                   help="Filter by family: llama qwen2 gemma2")
     p.add_argument("--tiers", nargs="+", default=None,
                    help="Filter by tier: small medium large")
 
@@ -80,9 +80,12 @@ def parse_args() -> argparse.Namespace:
     # ── Formula validation flags ──────────────────────────────────────────────
     p.add_argument("--run-formula-validation", action="store_true",
                    help="Run Exp 02b formula validation after Exp 01 + Exp 02")
-    p.add_argument("--val-alphas", nargs="+", type=float,
-                   default=[0.05, 0.1, 0.15, 0.2, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0],
-                   help="Alpha sweep values for formula validation")
+    p.add_argument("--val-bisect-lo", type=float, default=0.05,
+                   help="Bisection lower bound alpha for formula validation (default: 0.05)")
+    p.add_argument("--val-bisect-hi", type=float, default=3.0,
+                   help="Bisection upper bound alpha for formula validation (default: 3.0)")
+    p.add_argument("--val-bisect-tol", type=float, default=0.05,
+                   help="Bisection stopping tolerance for formula validation (default: 0.05)")
     p.add_argument("--val-sweep-layer-pcts", nargs="+", type=float,
                    default=[0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
                    help="Layer depth fractions for formula validation sweep (default: 40-80%% steering window)")
@@ -177,8 +180,11 @@ def build_formula_val_cmd(model_key: str, model_cfg: dict, args: argparse.Namesp
         "--model-name", model_key,
         "--exp01-dir", str(exp01_dir),
         "--exp02-dir", str(exp02_dir),
-        "--alphas"] + [str(a) for a in args.val_alphas] + [
-        "--sweep-layer-pcts"] + [str(p) for p in args.val_sweep_layer_pcts]
+        "--bisect-lo", str(args.val_bisect_lo),
+        "--bisect-hi", str(args.val_bisect_hi),
+        "--bisect-tol", str(args.val_bisect_tol),
+        "--sweep-layer-pcts",
+    ] + [str(p) for p in args.val_sweep_layer_pcts]
     if args.device:
         cmd += ["--device", args.device]
     if args.behaviors:
