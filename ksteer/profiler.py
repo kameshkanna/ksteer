@@ -402,21 +402,59 @@ class CeilingSweeper:
                 torch.cuda.empty_cache()
 
 
-def _is_coherent(text: str, rep_threshold: float = 0.55, nonascii_threshold: float = 0.25) -> bool:
+def _is_coherent(
+    text: str,
+    rep_threshold: float = 0.40,
+    nonascii_threshold: float = 0.25,
+    ttr_threshold: float = 0.40,
+    char_ngram_size: int = 6,
+    char_ngram_threshold: float = 0.15,
+) -> bool:
     """
-    Heuristic coherence check. Flags repetition loops and non-ASCII dominance.
-    Not a substitute for human evaluation — used only to auto-label sweep outputs.
+    Heuristic coherence check. Four independent failure modes:
+
+    1. Word-level repetition: a single (lowercased) word dominates > 40% of tokens.
+       Catches "yourself yourself yourself..." style loops.
+
+    2. Type-token ratio (TTR): unique words / total words < 0.40.
+       Catches near-repetition with surface variation, e.g.
+       "yourselfYour yourself yourselfYour" where word counts alone miss it.
+
+    3. Character n-gram repetition: a 6-char substring appears at > 15% of
+       sliding window positions. Catches subword loops like "ocracyocracyocracy"
+       and URL-fragment repetitions like "://://://".
+
+    4. Non-ASCII dominance: > 25% of characters are non-ASCII.
     """
     text = text.strip()
     if not text:
         return False
+
     words = text.split()
     if len(words) < 4:
         return False
-    top_freq = Counter(words).most_common(1)[0][1] / len(words)
+
+    words_lower = [w.lower() for w in words]
+
+    # 1. Word-level repetition (lowercased)
+    top_freq = Counter(words_lower).most_common(1)[0][1] / len(words_lower)
     if top_freq > rep_threshold:
         return False
-    nonascii_ratio = sum(1 for c in text if ord(c) > 127) / len(text)
-    if nonascii_ratio > nonascii_threshold:
+
+    # 2. Type-token ratio
+    ttr = len(set(words_lower)) / len(words_lower)
+    if ttr < ttr_threshold:
         return False
+
+    # 3. Character n-gram repetition
+    if len(text) > char_ngram_size * 4:
+        ngrams = [text[i : i + char_ngram_size] for i in range(len(text) - char_ngram_size)]
+        top_char_freq = Counter(ngrams).most_common(1)[0][1] / len(ngrams)
+        if top_char_freq > char_ngram_threshold:
+            return False
+
+    # 4. Non-ASCII dominance
+    if sum(1 for c in text if ord(c) > 127) / len(text) > nonascii_threshold:
+        return False
+
     return True
