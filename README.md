@@ -52,9 +52,11 @@ ksteer/
 │   ├── exp01_norm_profile.py     Exp 01: norm profiling + ceiling sweep
 │   ├── exp02_contrastive_vectors.py   Exp 02: behavioral direction extraction
 │   ├── exp02_formula_validation.py    Exp 02b: does K_l hold across layer depths?
+│   ├── exp03_formula_calibration.py   Exp 03: K_l^b = K_l/ρ_l calibration (no GPU)
+│   ├── aggregate_results.py      consolidate all results to cross_family_summary
 │   ├── compare_profiles.py       cross-model K_l comparison plots
 │   ├── audit_architecture.py     pre-run sanity check for a model
-│   └── run_all.py                batch runner for Exp 01 across models
+│   └── run_all.py                batch runner for all experiments across models
 ├── ksteer/
 │   ├── profiler.py               LayerNormProfiler, CeilingSweeper, NormProfile
 │   ├── contrastive.py            ContrastiveExtractor, BehavioralVector
@@ -63,7 +65,8 @@ ksteer/
 │       └── plot_utils.py         all figure generation
 ├── results/
 │   ├── exp01/{model}/            norm_profile.json, ceiling_sweep.json, plots
-│   └── exp02/{model}/{behavior}/ vectors.npz, vectors_meta.json, plots
+│   ├── exp02/{model}/{behavior}/ vectors.npz, vectors_meta.json, plots
+│   └── exp03/{model}/            calibration_summary.json, calibration_plot.png
 ├── requirements.txt
 ├── setup.py
 └── setup.sh
@@ -277,13 +280,86 @@ Output: `formula_validation.png` shows empirical ceiling alpha vs layer depth fo
 
 ---
 
+## Batch runner — all experiments in one command
+
+Run Exp 01 + 02 + 02b (formula validation) for all small and medium models:
+
+```bash
+python experiments/run_all.py --tiers small medium --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9 --run-exp02 --run-formula-validation --skip-existing
+```
+
+Run only Exp 01 for small models (no contrastive extraction):
+
+```bash
+python experiments/run_all.py --tiers small --run-ceiling-sweep --skip-existing
+```
+
+Run everything for a specific family:
+
+```bash
+python experiments/run_all.py --families llama --run-ceiling-sweep --run-exp02 --run-formula-validation --skip-existing
+```
+
+Dry-run to preview what would run without executing:
+
+```bash
+python experiments/run_all.py --tiers small medium --run-exp02 --run-formula-validation --dry-run
+```
+
+Batch runner flags:
+- `--run-ceiling-sweep` — include the alpha×K_l sweep during Exp 01
+- `--run-exp02` — run contrastive extraction (Exp 02) after profiling
+- `--run-formula-validation` — run formula validation (Exp 02b) after Exp 02
+- `--skip-existing` — skip models whose output files already exist
+- `--output-dir results` — base directory; exp01 and exp02 subdirs are derived automatically
+
+---
+
+## Experiment 03 — Formula Calibration (post-hoc, no GPU)
+
+Tests the generalized formula `K_l^b = K_l / ρ_l` where `ρ_l = ||mean_diff_l|| / mean_norm_l` is the behavioral SNR. If this calibrated ceiling is universal, the ratio `α_eff × K_l / K_l^b` should be approximately constant across all layers and behaviors.
+
+Requires: Exp 01, Exp 02, and Exp 02b all completed. No GPU needed.
+
+### Step 3a — Calibrate all models that have formula validation results
+
+```bash
+python experiments/exp03_formula_calibration.py
+```
+
+### Step 3b — Calibrate specific models
+
+```bash
+python experiments/exp03_formula_calibration.py --models llama-3.2-1b qwen2.5-1.5b gemma-2-2b mistral-7b
+```
+
+Output: `results/exp03/{model}/calibration_summary.json` (mean ratio, CV, R² per behavior), `calibration_plot.png` (K_l^b vs empirical ceiling scatter), and `results/exp03/cross_model_summary.json` + `.md` summarising all models.
+
+| CV (ratio) | Grade | Meaning |
+|---|---|---|
+| < 0.10 | `excellent` | K_l^b is a near-perfect universal ceiling |
+| 0.10–0.20 | `good` | Small layer-depth correction needed |
+| 0.20–0.40 | `partial` | ρ_l partially explains the gap; higher-order term needed |
+| > 0.40 | `poor` | ρ_l alone insufficient |
+
+### Step 3c — Aggregate all results to a cross-family summary
+
+```bash
+python experiments/aggregate_results.py
+```
+
+Output: `results/cross_family_summary.json` and `results/cross_family_summary.md`.
+
+---
+
 ## Recommended Run Order for a New Model
 
 1. Audit: `python experiments/audit_architecture.py --model <model_id>`
 2. Profile: `python experiments/exp01_norm_profile.py --model <model_id> --model-name <name> --run-ceiling-sweep --sweep-layer-pcts 0.3 0.5 0.7 0.9`
 3. Extract: `python experiments/exp02_contrastive_vectors.py --model <model_id> --model-name <name>`
 4. Validate: `python experiments/exp02_formula_validation.py --model <model_id> --model-name <name> --exp01-dir results/exp01 --exp02-dir results/exp02`
-5. Compare: `python experiments/compare_profiles.py --results-dir results/exp01`
+5. Calibrate: `python experiments/exp03_formula_calibration.py --models <name>`
+6. Compare: `python experiments/compare_profiles.py --results-dir results/exp01`
 
 ---
 
