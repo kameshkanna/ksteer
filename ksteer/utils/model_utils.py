@@ -56,6 +56,7 @@ def load_model(
     tokenizer = AutoTokenizer.from_pretrained(
         model_name_or_path,
         trust_remote_code=trust_remote_code,
+        clean_up_tokenization_spaces=False,
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
