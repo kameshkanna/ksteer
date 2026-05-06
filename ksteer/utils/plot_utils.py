@@ -88,8 +88,9 @@ def plot_ceiling_sweep(
     incoherent = [r.alpha for r in results if not r.is_coherent]
     if incoherent:
         ceiling = min(incoherent)
+        ceiling_idx = next(i for i, r in enumerate(results) if not r.is_coherent)
         ax.axvline(
-            x=[str(a) for a in alphas].index(str(ceiling)) - 0.5,
+            x=ceiling_idx - 0.5,
             color="crimson", linestyle="--", linewidth=1.5, label=f"ceiling ≈ {ceiling}×K_l",
         )
         ax.legend(fontsize=9)

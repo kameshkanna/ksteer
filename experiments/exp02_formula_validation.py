@@ -37,7 +37,7 @@ import json
 import logging
 import random
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 import torch
 
@@ -109,7 +109,7 @@ def load_norm_profile(exp01_dir: Path, model_name: str) -> NormProfile:
     )
 
 
-def find_behaviors(exp02_model_dir: Path, requested: List[str] | None) -> List[str]:
+def find_behaviors(exp02_model_dir: Path, requested: Optional[List[str]]) -> List[str]:
     if requested:
         return requested
     return sorted(
@@ -163,14 +163,14 @@ def main() -> None:
     sweeper = CeilingSweeper(model, tokenizer, profile)
 
     # behavior → layer_idx → empirical_ceiling_alpha
-    all_ceilings: Dict[str, Dict[int, float | None]] = {}
+    all_ceilings: Dict[str, Dict[int, Optional[float]]] = {}
     all_raw_results: Dict[str, Dict[str, list]] = {}
 
     for behavior in behaviors:
         bvec = BehavioralVector.load(exp02_model_dir / behavior)
         logger.info("=== Validating formula: behavior=%s ===", behavior)
 
-        behavior_ceilings: Dict[int, float | None] = {}
+        behavior_ceilings: Dict[int, Optional[float]] = {}
         behavior_raw: Dict[str, list] = {}
 
         for layer_idx in sweep_layers:
@@ -238,7 +238,6 @@ def main() -> None:
             "formula_accuracy": "strong" if cv < 0.15 else "partial" if cv < 0.30 else "weak",
         }
 
-        layer_pcts = [l / profile.num_layers for l in ceilings.keys()]
         logger.info(
             "  [%s] mean_ceiling=%.2f  std=%.2f  CV=%.2f  → %s",
             behavior,
