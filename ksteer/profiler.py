@@ -52,6 +52,13 @@ class NormProfile:
         window = self.k_values[start:end]
         return min(window), max(window)
 
+    @property
+    def window_k_mean(self) -> float:
+        """Mean K_l over the 40-80% steering window — used as K_optimal."""
+        start, end = self.steering_window
+        window = self.k_values[start:end]
+        return sum(window) / len(window)
+
     def to_dict(self) -> dict:
         start, end = self.steering_window
         return {

@@ -90,6 +90,14 @@ def parse_args() -> argparse.Namespace:
                    default=[0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
                    help="Layer depth fractions for formula validation sweep (default: 40-80%% steering window)")
 
+    # ── Ramp validation flags (Exp 03) ───────────────────────────────────────
+    p.add_argument("--run-ramp-validation", action="store_true",
+                   help="Run Exp 03 multi-layer K ramp validation after Exp 02")
+    p.add_argument("--ramp-f-start", type=float, default=0.13,
+                   help="Ramp start fraction of K_optimal (default: 0.13)")
+    p.add_argument("--ramp-f-values", nargs="+", type=float, default=None,
+                   help="f_end sweep values (default: 0.10 to 1.0 in 0.05 steps)")
+
     # ── Run control ──────────────────────────────────────────────────────────
     p.add_argument("--skip-existing", action="store_true",
                    help="Skip models whose outputs already exist")
@@ -136,6 +144,10 @@ def formula_val_done(model_key: str, exp02_dir: Path) -> bool:
     return (exp02_dir / model_key / "formula_validation" / "formula_summary.json").exists()
 
 
+def ramp_val_done(model_key: str, exp03_dir: Path) -> bool:
+    return (exp03_dir / model_key / "ramp_summary.json").exists()
+
+
 def build_exp01_cmd(model_key: str, model_cfg: dict, args: argparse.Namespace, exp01_dir: Path) -> list[str]:
     cmd = [
         sys.executable,
@@ -169,6 +181,26 @@ def build_exp02_cmd(model_key: str, model_cfg: dict, args: argparse.Namespace, e
         cmd += ["--behaviors"] + args.behaviors
     if args.skip_existing:
         cmd += ["--skip-existing"]
+    return cmd
+
+
+def build_ramp_val_cmd(model_key: str, model_cfg: dict, args: argparse.Namespace, exp01_dir: Path, exp02_dir: Path, exp03_dir: Path) -> list[str]:
+    cmd = [
+        sys.executable,
+        str(REPO_ROOT / "experiments" / "exp03_ramp_validation.py"),
+        "--model", model_cfg["model_id"],
+        "--model-name", model_key,
+        "--exp01-dir", str(exp01_dir),
+        "--exp02-dir", str(exp02_dir),
+        "--output-dir", str(exp03_dir),
+        "--f-start", str(args.ramp_f_start),
+    ]
+    if args.device:
+        cmd += ["--device", args.device]
+    if args.behaviors:
+        cmd += ["--behaviors"] + args.behaviors
+    if args.ramp_f_values:
+        cmd += ["--f-values"] + [str(v) for v in args.ramp_f_values]
     return cmd
 
 
@@ -226,18 +258,21 @@ def main() -> None:
         sys.exit(1)
 
     data_dir = Path(args.data_dir)
-    do_exp02 = args.run_exp02 or args.run_formula_validation
+    exp03_dir = base_dir / "exp03"
+    do_exp02 = args.run_exp02 or args.run_formula_validation or args.run_ramp_validation
     do_val = args.run_formula_validation
+    do_ramp = args.run_ramp_validation
 
     # ── Print plan ───────────────────────────────────────────────────────────
     logger.info("Selected %d model(s):", len(selected))
-    logger.info("  %-25s  %6s  %6s  %10s", "model", "exp01", "exp02", "val")
-    logger.info("  " + "─" * 52)
+    logger.info("  %-25s  %6s  %6s  %10s  %8s", "model", "exp01", "exp02", "val", "ramp")
+    logger.info("  " + "─" * 60)
     for key, cfg in selected:
         e1 = "SKIP" if (args.skip_existing and exp01_done(key, exp01_dir, args.run_ceiling_sweep)) else "run"
         e2 = ("SKIP" if (args.skip_existing and exp02_done(key, exp02_dir, data_dir, args.behaviors)) else "run") if do_exp02 else "—"
         ev = ("SKIP" if (args.skip_existing and formula_val_done(key, exp02_dir)) else "run") if do_val else "—"
-        logger.info("  %-25s  %6s  %6s  %10s", key, e1, e2, ev)
+        er = ("SKIP" if (args.skip_existing and ramp_val_done(key, exp03_dir)) else "run") if do_ramp else "—"
+        logger.info("  %-25s  %6s  %6s  %10s  %8s", key, e1, e2, ev, er)
 
     if args.dry_run:
         logger.info("Dry run — nothing executed.")
@@ -280,7 +315,7 @@ def main() -> None:
                     results[model_key]["val"] = False
                     continue
 
-        # Formula validation
+        # Formula validation (exp02b — single layer bisection)
         if do_val:
             if args.skip_existing and formula_val_done(model_key, exp02_dir):
                 logger.info("  val: exists, skipping.")
@@ -292,15 +327,28 @@ def main() -> None:
                 )
                 results[model_key]["val"] = ok
 
+        # Ramp validation (exp03 — multi-layer K sweep)
+        if do_ramp:
+            if args.skip_existing and ramp_val_done(model_key, exp03_dir):
+                logger.info("  ramp: exists, skipping.")
+                results[model_key]["ramp"] = True
+            else:
+                ok = run_subprocess(
+                    build_ramp_val_cmd(model_key, model_cfg, args, exp01_dir, exp02_dir, exp03_dir),
+                    f"ramp/{model_key}",
+                )
+                results[model_key]["ramp"] = ok
+
     # ── Summary ──────────────────────────────────────────────────────────────
     elapsed = time.time() - total_start
     logger.info("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     logger.info("Done in %.1fs", elapsed)
-    logger.info("  %-25s  %6s  %6s  %10s", "model", "exp01", "exp02", "val")
-    logger.info("  " + "─" * 52)
+    logger.info("  %-25s  %6s  %6s  %10s  %8s", "model", "exp01", "exp02", "val", "ramp")
+    logger.info("  " + "─" * 60)
     for key, res in results.items():
         fmt = lambda k: ("✓" if res.get(k) else ("—" if k not in res else "✗"))
-        logger.info("  %-25s  %6s  %6s  %10s", key, fmt("exp01"), fmt("exp02"), fmt("val"))
+        logger.info("  %-25s  %6s  %6s  %10s  %8s",
+                    key, fmt("exp01"), fmt("exp02"), fmt("val"), fmt("ramp"))
 
     failed = [k for k, r in results.items() if not all(r.values())]
     if failed:
