@@ -91,7 +91,7 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument(
         "--sweep-prompt",
-        default="Tell me something interesting about the history of science.",
+        default="Gravity is one of the four fundamental forces of nature. It keeps planets in orbit and causes objects to fall toward the ground.",
         type=str,
     )
     p.add_argument("--sweep-max-tokens", default=60, type=int)
