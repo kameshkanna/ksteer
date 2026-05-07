@@ -1,0 +1,1944 @@
+{
+  "model": "llama-3.2-1b",
+  "f_start": 0.13,
+  "f_start_frac": 0.2708,
+  "layer_indices": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "behaviors": {
+    "formality": {
+      "linear": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline, but I\u2019m also interested in the history of science as a field of study. I\u2019m interested in the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline, but I\u2019m also interested in the history of science as a field of study. I\u2019m interested in the history of"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline, but I\u2019m also interested in the history of science as a field of study. I\u2019m interested in the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline, but I\u2019m also interested in the history of science as a field of study. I\u2019m interested in the history of"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.106221,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline that has been studied by historians of science. I\u2019m also interested in the history of science as a discipline that has been"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": false,
+              "output_text": " I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.108271,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline that has been studied by historians of science. I\u2019m also interested in the history of science as a discipline that has been"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": false,
+              "output_text": " I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 0.159331,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.212442,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline, but I\u2019m also interested in the history of science as a field of study. I\u2019m interested in the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 0.162407,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.216542,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a discipline, but I\u2019m also interested in the history of science as a field of study. I\u2019m interested in the history of"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the history of science and technology. I am interested in the"
+            }
+          ]
+        }
+      }
+    },
+    "refusal": {
+      "linear": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.45,
+          "k_peak_raw": 0.477993,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.0625,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.212442,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.25,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.265552,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.3,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.318662,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.35,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.371773,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.4,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.424883,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.45,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477993,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.5,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.531104,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a way of thinking. I\u2019m interested in the history of science as a way of thinking about the world. I\u2019m interested in the history of science as a way of thinking about the world"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.45,
+          "k_peak_raw": 0.48722,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.0625,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.216542,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.25,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.270678,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.3,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.324814,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.35,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.378949,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.4,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.433085,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.45,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.48722,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.5,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.541356,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a way of thinking about the world. I\u2019m not talking about the history of science as a way of thinking about the world, but rather the history of science as a way of thinking about"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.45,
+          "k_peak_raw": 0.477993,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.0625,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.212442,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.265552,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.3,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.318662,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.35,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.371773,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.4,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.424883,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.45,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477993,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.5,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.531104,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a way of thinking about the world. I\u2019m not talking about the history of science as a way of thinking about the world, but rather the history of science as a way of thinking about"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.45,
+          "k_peak_raw": 0.48722,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.0625,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.216542,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.270678,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.3,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.324814,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.35,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.378949,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.4,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.433085,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.45,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.48722,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.5,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.541356,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a way of thinking about the world. I\u2019m not talking about the history of science as a way of thinking about the world, but rather the history of science as a way of thinking about"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.45,
+          "k_peak_raw": 0.477993,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.0625,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.2,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.212442,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.25,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.265552,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.3,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.318662,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.35,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.371773,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.4,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.424883,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.45,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477993,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the way that science has shaped our understanding of the world. I\u2019m also interested in the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.5,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.531104,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a profession. I\u2019m interested in the history of science as a career choice. I\u2019m interested in the history of science as a way of life. I\u2019m interested in the history of science as a"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.45,
+          "k_peak_raw": 0.48722,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.0625,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.2,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.216542,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.25,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.270678,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.3,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.324814,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.35,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.378949,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.4,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.433085,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.45,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.48722,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the way that science has shaped our understanding of the world. I\u2019m also interested in the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.5,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.541356,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a profession. I\u2019m interested in the history of science as a career choice. I\u2019m interested in the history of science as a way of life. I\u2019m interested in the history of science as a"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.85,
+          "k_peak_raw": 0.902876,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 0.7708,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.212442,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.265552,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.318662,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.371773,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.424883,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477993,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.531104,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.584214,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.637325,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.690435,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.743545,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.796656,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.8,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.849766,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.85,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.902876,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.9,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.955987,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a subject, but rather the history of science as a profession. I\u2019m not talking about the history of science as a career, but rather the history of science as a way of life. I\u2019m not talking about the history of science as a way"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.9,
+          "k_peak_raw": 0.974441,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 0.875,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.216542,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.270678,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.324814,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.378949,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.433085,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.48722,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.541356,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.595492,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.649627,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.703763,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.757898,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.812034,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.8,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.86617,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.85,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.920305,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a field of study because it\u2019s a field that has been around for a long time, and it\u2019s one that I think is"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.9,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.974441,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a field of study because it\u2019s a field that has been around for a long time, and it\u2019s one that I think is"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.95,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.028576,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a subject, but rather the history of science as a profession. I\u2019m not talking about the history of science as a career, but rather the history of science as a way of life. I\u2019m not talking about the history of science as a way"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.4,
+          "k_peak_raw": 0.424883,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.1667,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.212442,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.265552,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and I\u2019m interested in the history of science as a way of understanding the world in a particular"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.318662,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a way of thinking. I\u2019m interested in the way that science has been used to justify or defend certain political or social positions. I\u2019m also interested in the way that science has been used"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.371773,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a human endeavor. I\u2019m interested in the history of science as a way of understanding the world, and the role of science in that understanding. I\u2019m also interested in the history of science"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.424883,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a profession. I\u2019m interested in the history of science as a career choice, and I\u2019m interested in the history of science as a way of life. I\u2019m interested in the history of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.45,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477993,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a profession, but the history of science as a field of study. I\u2019m interested in the history of science as a discipline, and I\u2019m interested in the history of science as a profession. I\u2019m not interested in the history of science as a"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.35,
+          "k_peak_raw": 0.378949,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.2708,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how we came to understand it. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.216542,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and the history of science as a way of understanding the world in a particular way. I\u2019m"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.270678,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and I\u2019m interested in the history of science as a way of understanding the world in a particular"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.324814,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a way of thinking. I\u2019m interested in the way that science has been practiced in the past, and how it has changed over time. I\u2019m also interested in the way that science has"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.378949,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a field of study, but rather the history of science as a human endeavor. I\u2019m interested in the history of science as a way of understanding the world, and the role of science in that understanding. I\u2019m also interested in the history of science"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.433085,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a profession, but the history of science as a field of study. I\u2019m talking about the history of science as a discipline. I\u2019m talking about the history of science as a profession. I\u2019m talking about the history of science as a field of"
+            }
+          ]
+        }
+      }
+    },
+    "sycophancy": {
+      "linear": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.106221,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.108271,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world that is not"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world as a way"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but the history of science as a field of study. I\u2019m talking about the history of science as a way of thinking about the world. I\u2019m talking about the history of science as a way of thinking about the world as a way"
+            }
+          ]
+        }
+      }
+    },
+    "verbosity": {
+      "linear": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.106221,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.108271,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.106221,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.108271,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.106221,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.108271,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.35,
+          "k_peak_raw": 0.371773,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.2708,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.159331,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.212442,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.265552,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.318662,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.371773,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.424883,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.35,
+          "k_peak_raw": 0.378949,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.2708,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.162407,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.216542,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.270678,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.324814,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world around us. I\u2019m interested in the history of science as a way of understanding the world around us"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.378949,
+              "is_coherent": true,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m interested in the history of science as a way of understanding the world, and how it has changed over time. I\u2019m also interested in the history of science as a"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.433085,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0622,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.106221,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.0827,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.108271,
+              "is_coherent": false,
+              "output_text": " I\u2019m not talking about the history of science as a discipline, but rather the history of science as a field of study. I\u2019m not talking about the history of science as a field of study, but rather the history of science as a field of study. I\u2019m not talking about the history of"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

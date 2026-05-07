@@ -1,0 +1,3044 @@
+{
+  "model": "gemma-2-9b",
+  "f_start": 0.13,
+  "f_start_frac": 0.2708,
+  "layer_indices": [
+    16,
+    18,
+    20,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33
+  ],
+  "behaviors": {
+    "formality": {
+      "linear": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the history of science. The history of science is a subject that is often overlooked in the"
+            }
+          ]
+        }
+      }
+    },
+    "refusal": {
+      "linear": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 1.342655,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.790207,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.938921,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.895104,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.938921,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.895104,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.938921,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      }
+    },
+    "sycophancy": {
+      "linear": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 9.389206,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.877841,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.25,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.347302,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.3,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.816762,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.35,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.286222,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked by many people, but it is a subject that is very important. The history of science is the study of the development of scientific knowledge and the development of scientific methods. It is"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.4,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.755683,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked by many people, but it is a subject that is very important. The history of science is the study of the development of scientific knowledge and the development of scientific methods. It is"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.45,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.225143,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked by many people, but it is a subject that is very important. The history of science is the study of the development of scientific knowledge and the development of scientific methods. It is"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.5,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.694603,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first example is the history of the concept of the atom. The idea of the atom was"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.55,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.164064,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first example is the history of the concept of the atom. The idea of the atom was"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.6,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.633524,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\n1. The history of science is full of stories of people who were ahead of their time."
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.65,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.102984,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\n1. The history of science is full of stories of people who were ahead of their time."
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.7,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.572445,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\n1. The history of science is full of stories of people who were ahead of their time."
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.75,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.041905,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\n1. The history of science is full of stories of people who were ahead of their time."
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.8,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.511365,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\n1. The history of science is full of stories of people who were ahead of their time."
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.85,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.980826,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\n1. The history of science is full of people who were ahead of their time. For example"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.9,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.450286,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\n1. The history of science is full of people who were ahead of their time. For example"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.95,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.919746,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a very interesting subject. I'm not sure what you mean by \"interesting\" but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 1.0,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 9.389206,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nIn the 19th century, the French mathematician and physicist Joseph Fourier was working on the problem of heat conduction. He was trying to find a way to describe how"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.895104,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": false,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is a subject that is often overlooked in the history of science. It is"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 8.951036,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.790207,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.237759,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.685311,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first example is the history of the concept of the atom. The idea of the atom was"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.132863,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first example is the history of the concept of the atom. The idea of the atom was"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.580414,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method is"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.45,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.027966,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method is"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.5,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.475518,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method is"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.55,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.92307,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method is"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.6,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.370622,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll give you a few examples.\n\n1. The history of the scientific method. The scientific method is a way of doing science that is based"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.65,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.818174,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nIn the 19th century, the French mathematician and physicist Joseph Fourier was working on the problem of heat conduction. He was trying to find a way to describe how"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.7,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.265725,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nThe first person to discover that the Earth was round was a Greek philosopher named Pythagoras. He was the first person to discover that the Earth was round.\n\n[Answer "
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.75,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.713277,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nThe first person to discover that the Earth was round was a Greek philosopher named Pythagoras. He was the first person to discover that the Earth was round.\n\n[Answer "
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.8,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.160829,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nThe first person to ever use the word \"science\" was Francis Bacon. He used it in his book \"The New Atlantis\" in 1627.\n\n"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.85,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.608381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.9,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.055933,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.95,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.503484,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 1.0,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.951036,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 9.389206,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.877841,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.347302,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is very important. The history of science is the study of the development of scientific knowledge and the methods used to acquire it. It is a subject that"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.816762,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first example is the history of the concept of the atom. The idea of the atom was"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.286222,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first example is the history of the concept of the atom. The idea of the atom was"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.755683,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method is"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.45,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.225143,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method is"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.5,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.694603,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method is"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.55,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.164064,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. I'm not sure what you mean by \"interesting\", but I'll give you a few examples.\n\n1. The history of the scientific method. The scientific method is a way of doing science that is based"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.6,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.633524,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a very interesting subject. I'm not sure what you mean by \"interesting\" but I'll try to give you a few examples.\n\nThe first thing that comes to mind is the history of the scientific method. The scientific method"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.65,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.102984,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nThe first person to discover that the Earth was round was a Greek philosopher named Pythagoras. He was the first person to discover that the Earth was round.\n\n[Answer "
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.7,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.572445,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nThe first person to discover that the Earth was round was a Greek philosopher named Pythagoras. He was the first person to discover that the Earth was round.\n\n[Answer "
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.75,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.041905,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nThe first person to ever use the word \"science\" was Francis Bacon. He used it in his book \"The New Atlantis\" in 1627.\n\n"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.8,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.511365,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I've been reading a lot of books about it lately. I'm not sure if you'"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.85,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.980826,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.9,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.450286,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.95,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.919746,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 1.0,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 9.389206,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nI'm not sure if this is interesting, but I'll tell you anyway.\n\nI'm a big fan of the history of science, and I'm always looking for new ways to learn about it. I've been reading a lot of"
+            }
+          ]
+        }
+      }
+    },
+    "verbosity": {
+      "linear": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 8.951036,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.790207,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.25,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.237759,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.3,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.685311,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.35,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.132863,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.4,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.580414,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.45,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.027966,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.5,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.475518,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.55,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.92307,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.6,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.370622,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.65,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.818174,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.7,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.265725,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.75,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.713277,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.8,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.160829,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.85,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.608381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.9,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.055933,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.95,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.503484,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 1.0,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.951036,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of DNA, the molecule"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 9.389206,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.877841,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.25,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.347302,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.3,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.816762,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.35,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.286222,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.4,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.755683,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.45,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.225143,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.5,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.694603,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.55,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.164064,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.6,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.633524,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.65,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.102984,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.7,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.572445,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.75,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.041905,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.8,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.511365,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.85,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.980826,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.9,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.450286,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.95,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.919746,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of DNA, the molecule"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 1.0,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 9.389206,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 8.951036,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.790207,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.237759,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.3,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.685311,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.35,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.132863,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.4,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.580414,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.45,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.027966,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.5,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.475518,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.55,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.92307,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.6,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.370622,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.65,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.818174,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.7,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.265725,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.75,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.713277,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.8,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.160829,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.85,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.608381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.9,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.055933,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.95,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.503484,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 1.0,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.951036,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of DNA, the molecule"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 9.389206,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.877841,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.347302,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.3,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.816762,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.35,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.286222,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.4,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.755683,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.45,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.225143,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.5,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.694603,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.55,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.164064,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.6,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.633524,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.65,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.102984,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.7,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.572445,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.75,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.041905,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.8,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.511365,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.85,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.980826,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.9,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.450286,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.95,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.919746,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of DNA, the molecule"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 1.0,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 9.389206,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of DNA, the molecule"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 8.951036,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.2,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.790207,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.25,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.237759,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.3,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.685311,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.35,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.132863,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.4,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.580414,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.45,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.027966,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.5,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.475518,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.55,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.92307,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.6,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.370622,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.65,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.818174,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.7,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.265725,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.75,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.713277,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.8,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.160829,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.85,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.608381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.9,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.055933,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.95,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.503484,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 1.0,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.951036,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 9.389206,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.2,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.877841,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.25,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.347302,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.3,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.816762,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.35,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.286222,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.4,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.755683,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.45,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.225143,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.5,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.694603,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.55,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.164064,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.6,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.633524,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.65,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.102984,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.7,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.572445,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.75,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.041905,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.8,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.511365,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.85,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.980826,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.9,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.450286,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.95,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.919746,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 1.0,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 9.389206,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 8.951036,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.790207,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.237759,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.685311,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.132863,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.580414,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.027966,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.475518,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.92307,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.370622,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.818174,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.265725,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.713277,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.8,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.160829,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.85,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.608381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.9,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.055933,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.95,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.503484,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 1.0,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.951036,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 9.389206,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.877841,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.347302,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.816762,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.286222,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.755683,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.225143,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.694603,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.164064,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.633524,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.102984,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.572445,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.041905,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.8,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.511365,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.85,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.980826,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.9,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.450286,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.95,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.919746,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 1.0,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 9.389206,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 8.951,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 8.951036,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.895104,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.342655,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 1.790207,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.237759,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 2.685311,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.132863,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 3.580414,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.45,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.027966,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.5,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.475518,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.55,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 4.92307,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.6,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.370622,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.65,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 5.818174,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.7,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.265725,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.75,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 6.713277,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.8,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.160829,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.85,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 7.608381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.9,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.055933,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.95,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.503484,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is full of interesting stories. Here are a few:\n\n* The discovery of the double helix structure of DNA by James Watson and Francis Crick in 1953 was a major breakthrough in molecular biology. It revolutionized our understanding of genetics"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 1.0,
+              "k_optimal": 8.951,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 8.951036,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is full of interesting stories. Here are a few:\n\n* The discovery of the double helix structure of DNA by James Watson and Francis Crick in 1953 was a major breakthrough in molecular biology. It revolutionized our understanding of genetics"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 9.389206,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.938921,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.408381,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.877841,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.347302,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 2.816762,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.286222,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 3.755683,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.45,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.225143,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.5,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 4.694603,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.55,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.164064,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that can provide a great deal of insight into the development of our understanding of the world around us.\n\nOne interesting aspect of the history of science is the"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.6,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 5.633524,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.65,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.102984,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.7,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 6.572445,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.75,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.041905,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.8,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.511365,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.85,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 7.980826,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is a fascinating subject, and there are many interesting stories to tell. Here are a few examples:\n\n1. The discovery of DNA: In the early 20th century, scientists were trying to understand the structure of genes and how they"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.9,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.450286,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is full of interesting stories. Here are a few:\n\n* The discovery of the double helix structure of DNA by James Watson and Francis Crick in 1953 was a major breakthrough in molecular biology. It revolutionized our understanding of genetics"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.95,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 8.919746,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is full of interesting stories. Here are a few:\n\n* The discovery of the double helix structure of DNA by James Watson and Francis Crick in 1953 was a major breakthrough in molecular biology. It revolutionized our understanding of genetics"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 1.0,
+              "k_optimal": 9.3892,
+              "k_optimal_source": "window",
+              "k_peak_raw": 9.389206,
+              "is_coherent": true,
+              "output_text": "\n\n[Answer 1]\n\nThe history of science is full of interesting stories. Here are a few:\n\n* The discovery of the double helix structure of DNA by James Watson and Francis Crick in 1953 was a major breakthrough in molecular biology. It revolutionized our understanding of genetics"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

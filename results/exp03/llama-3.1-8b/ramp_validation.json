@@ -1,0 +1,2981 @@
+{
+  "model": "llama-3.1-8b",
+  "f_start": 0.13,
+  "f_start_frac": 0.2708,
+  "layer_indices": [
+    12,
+    14,
+    16,
+    17,
+    19,
+    20,
+    22,
+    23,
+    25
+  ],
+  "behaviors": {
+    "formality": {
+      "linear": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.095417,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is full of interesting stories and discoveries. In this article, we will explore some of the most interesting facts about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.100799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is full of interesting stories and discoveries. In this article, we will explore some of the most interesting facts about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 0.143126,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is full of interesting stories and discoveries. In this article, we will explore some of the most interesting facts about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is full of interesting stories and discoveries. In this article, we will explore some of the most interesting facts about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.100799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is full of interesting stories and discoveries. In this article, we will explore some of the most interesting facts about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.095417,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is full of interesting stories and discoveries. In this article, we will explore some of the most interesting facts about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.100799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is a fascinating subject. It is a subject that is often overlooked, but it is one that is full of interesting stories and discoveries. In this article, we will explore some of the most interesting facts about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.2,
+          "k_peak_raw": 0.190834,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.5833,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to use the term \"scientist\" was William Whewell in 1833. He coined the term in a letter to the British Association for the Advancement of Science. The term was not widely used until the "
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to use the term \"scientist\" was William Whewell in 1833. He coined the term in a letter to the British Association for the Advancement of Science. The term was not widely used until the "
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": false,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is full of interesting stories. Here are a few of my favorites.\nThe history of science is full of interesting stories. Here are a few of my favorites.\nThe history of science is full of interesting stories. Here are"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 0.151198,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to use the term \"scientist\" was William Whewell in 1833. He coined the term in a letter to the British Association for the Advancement of Science. The term was not widely used until the "
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": false,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe history of science is full of interesting stories. Here are a few of my favorites.\nThe history of science is full of interesting stories. Here are a few of my favorites.\nThe history of science is full of interesting stories. Here are"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      }
+    },
+    "refusal": {
+      "linear": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 0.143126,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 0.151198,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science. I'm not interested in the history of science, but I am interested in the history of science."
+            }
+          ]
+        }
+      }
+    },
+    "sycophancy": {
+      "linear": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.15,
+          "k_peak_raw": 0.143126,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.6875,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": false,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned that the history of science was a history of the history of science. I learned that the history of science was a history"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.100799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": false,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned that the history of science was a history of the history of science. I learned that the history of science was a history"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.25,
+          "k_peak_raw": 0.238543,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.4792,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.2,
+          "k_peak_raw": 0.201598,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.5833,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.251997,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science."
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.3,
+          "k_peak_raw": 0.286251,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.375,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.35,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.33396,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, I'm interested in the history of science. I'm not interested in the history of science, I'm interested in the history of science. I'm not interested in the history of science, I'm interested in the history of science. I'm not"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.1,
+          "k_peak_raw": 0.100799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": -0.7917,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": false,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned that the history of science was a history of the history of science. I learned that the history of science was a history"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.8,
+          "k_peak_raw": 0.763336,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 0.6667,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.33396,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.381668,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.429377,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477085,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.524794,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.572502,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.620211,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.667919,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.715628,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.8,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.763336,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.85,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.811045,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.7,
+          "k_peak_raw": 0.705593,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 0.4583,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.251997,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.302397,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.352796,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn was a historian of science who argued that science"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.403196,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.453595,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.503995,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned this from a book called The History of Science, which was written by a man named John H. Johnson. He was"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.554394,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.604794,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.655193,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.705593,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.755992,
+              "is_coherent": false,
+              "output_text": " I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science. I'm not interested in the history of science, but I'm interested in the history of science."
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": false,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned that the history of science was a history of the history of science. I learned that the history of science was a history"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": null,
+          "k_peak_raw": null,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": null,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": false,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of the history of science. I learned that the history of science was a history of the history of science. I learned that the history of science was a history"
+            }
+          ]
+        }
+      }
+    },
+    "verbosity": {
+      "linear": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 0.95417,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to suggest that the Earth might be round was Pythagoras, a Greek philosopher who lived in the 6th century BC. He was a mathematician and a mystic, and he believed that the Earth was a sphere"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.35,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.33396,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.4,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.381668,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.45,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.429377,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.5,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477085,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.55,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.524794,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.6,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.572502,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.65,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.620211,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.7,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.667919,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.75,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.715628,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.8,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.763336,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.85,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.811045,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at several universities. I've also been a science journalist, and I've written"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.9,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.858753,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.95,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.906462,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 1.0,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.95417,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 1.00799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "linear",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.25,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.251997,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.3,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.302397,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to suggest that the Earth might be round was Pythagoras, a Greek philosopher who lived in the 6th century BC. He was a mathematician and a mystic, and he believed that the Earth was a sphere"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.35,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.352796,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.4,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.403196,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.45,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.453595,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.5,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.503995,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.55,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.554394,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.6,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.604794,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.65,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.655193,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.7,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.705593,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.75,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.755992,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.8,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.806392,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at several universities. I've also been a science journalist, and I've written"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.85,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.856791,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.9,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.907191,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 0.95,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.95759,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "linear",
+              "f_scale": 1.0,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.00799,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            }
+          ]
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 0.95417,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.35,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.33396,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.4,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.381668,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.45,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.429377,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.5,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477085,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.55,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.524794,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.6,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.572502,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.65,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.620211,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.7,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.667919,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.75,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.715628,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.8,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.763336,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at a few universities. I'm also a science fiction writer, and I've"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.85,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.811045,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at several universities. I've also been a science journalist, and I've written"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.9,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.858753,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at several universities. I've also been a science journalist, and I've written"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.95,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.906462,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 1.0,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.95417,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 1.00799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "cosine",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.25,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.251997,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.3,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.302397,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to suggest that the Earth might be round was Pythagoras, a Greek philosopher who lived in the 6th century BC. He was a mathematician and a mystic, and he believed that the Earth was a sphere"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.35,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.352796,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.4,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.403196,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.45,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.453595,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.5,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.503995,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.55,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.554394,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.6,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.604794,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.65,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.655193,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.7,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.705593,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.75,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.755992,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at a few universities. I'm also a science fiction writer, and I've"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.8,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.806392,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at several universities. I've also been a science journalist, and I've written"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.85,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.856791,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at several universities. I've also been a science journalist, and I've written"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.9,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.907191,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 0.95,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.95759,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "cosine",
+              "f_scale": 1.0,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.00799,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            }
+          ]
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 0.95417,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.35,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.33396,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.4,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.381668,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.45,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.429377,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.5,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477085,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.55,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.524794,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science fiction.\nThe first science fiction story was written by Lucian of Samosata, a Greek satirist who lived in the 2nd century AD. It was called A True Story, and it was a satire of the travel narratives that"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.6,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.572502,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.65,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.620211,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.7,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.667919,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.75,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.715628,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.8,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.763336,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.85,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.811045,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.9,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.858753,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.95,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.906462,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 1.0,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.95417,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 1.00799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "bell",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.25,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.251997,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.3,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.302397,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.35,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.352796,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.4,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.403196,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.45,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.453595,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.5,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.503995,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science fiction.\nThe first science fiction story was written by Lucian of Samosata, a Greek satirist who lived in the 2nd century AD. It was called A True Story, and it was a satire of the travel narratives that"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.55,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.554394,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.6,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.604794,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.65,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.655193,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.7,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.705593,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.75,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.755992,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.8,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.806392,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.85,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.856791,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at several universities. I've also been a science journalist, and I've written"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.9,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.907191,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 0.95,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.95759,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "bell",
+              "f_scale": 1.0,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.00799,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            }
+          ]
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 0.95417,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.33396,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.381668,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.429377,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science was not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477085,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.524794,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science was not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.572502,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science was not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.620211,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm looking for a book that I read in high school. It was a collection of short stories about the history of science, and I think it was called \""
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.667919,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm looking for a book that I read in high school. It was a collection of short stories about the history of science, and I think it was called \""
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.715628,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.8,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.763336,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.85,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.811045,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.9,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.858753,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.95,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.906462,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 1.0,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.95417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 1.0,
+          "k_peak_raw": 1.00799,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 1.0833,
+          "probes": [
+            {
+              "shape": "exponential",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.25,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.251997,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.3,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.302397,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.35,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.352796,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady march of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.4,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.403196,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.45,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.453595,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science was not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.5,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.503995,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science was not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.55,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.554394,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science was not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.6,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.604794,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science was not a steady accumulation of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.65,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.655193,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm looking for a book that I read in high school. It was a collection of short stories about the history of science, and I think it was called \""
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.7,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.705593,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm looking for a book that I read in high school. It was a collection of short stories about the history of science, and I think it was called \""
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.75,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.755992,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm looking for a book that I read in high school. It was a collection of short stories about the history of science, and I think it was called \""
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.8,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.806392,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.85,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.856791,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.9,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.907191,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 0.95,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.95759,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm not sure where else to post it. I'm a high school student, and I'm doing a project on the history of science. I'm looking for"
+            },
+            {
+              "shape": "exponential",
+              "f_scale": 1.0,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 1.00799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm not sure where else to post it.\nI'm a high school student, and I'm doing a project on the history of science. I'm looking for"
+            }
+          ]
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.85,
+          "k_peak_raw": 0.811045,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 0.7708,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.095417,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.143126,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to use the term \"scientist\" was William Whewell in 1833. He coined the term in a letter to the British Association for the Advancement of Science. He was responding to a suggestion that the term"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.190834,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to suggest that the Earth might be round was Pythagoras, a Greek philosopher who lived in the 6th century BC. He was a mathematician and a mystic, and he believed that the Earth was a sphere"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.238543,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.286251,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.33396,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.381668,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to point me in the right direction.\nI'm looking for a book that I read a few years ago, but I can't"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.45,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.429377,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a number of books and articles on the subject, and I've also given many talks and lectures on the topic. I'm always happy to share"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.5,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.477085,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.55,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.524794,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.6,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.572502,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.65,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.620211,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.7,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.667919,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at several universities. I'm also a science fiction fan"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.75,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.715628,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at several universities. I'm also a science fiction fan"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.8,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.763336,
+              "is_coherent": true,
+              "output_text": " I'll try to answer, but I'm not an expert, so I might not know. But I'll try.\nI'll start: The first person to suggest that the Earth might be round was Anaxagoras, in the 5th century BC. He was a Greek, and he"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.85,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.811045,
+              "is_coherent": true,
+              "output_text": " I'll try to answer, but I'm not an expert, so I might not know. But I'll try.\nI'll start: The first person to suggest that the Earth might be round was Anaxagoras, in the 5th century BC. He was a Greek, and he"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.9,
+              "k_optimal": 0.9542,
+              "k_optimal_source": "mid",
+              "k_peak_raw": 0.858753,
+              "is_coherent": false,
+              "output_text": " I'll bet I can guess what it is.\nI'll bet I can guess what it is.\nI'll bet I can guess what it is. I'll bet I can guess what it is. I'll bet I can guess what it is. I'll bet I can guess what it is."
+            }
+          ]
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "f_start": 0.13,
+          "f_start_frac": 0.2708,
+          "f_scale_max": 0.8,
+          "k_peak_raw": 0.806392,
+          "baseline_f_max": 0.48,
+          "deviation_from_baseline": 0.6667,
+          "probes": [
+            {
+              "shape": "constant",
+              "f_scale": 0.1,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.100799,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first thing I learned about the history of science was that it was a history of mistakes. I learned this from a book called The Structure of Scientific Revolutions by Thomas Kuhn. Kuhn argued that science is not a steady accumulation of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.15,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.151198,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to use the term \"scientist\" was William Whewell in 1833. He coined the term in a letter to the British Association for the Advancement of Science. He was responding to a suggestion that the term"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.2,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.201598,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nThe first person to suggest that the Earth might be round was Pythagoras, a Greek philosopher who lived in the 6th century BC. He was a mathematician and a mystic, and he believed that the Earth was a sphere"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.25,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.251997,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.3,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.302397,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.35,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.352796,
+              "is_coherent": true,
+              "output_text": " I'll tell you something interesting about the history of science.\nI'm not sure if this is the right place to post this, but I'm sure someone will be able to help me.\nI'm looking for a book that I read a long time ago. It was a book about the history of"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.4,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.403196,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a book on the history of science, and I've also written a number of articles on the subject. I'm also a science fiction writer,"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.45,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.453595,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and a bunch of articles, and I've taught at a few universities. I'm also a science fiction writer, and I've"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.5,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.503995,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.55,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.554394,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.6,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.604794,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at the university level. I'm also a science fiction"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.65,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.655193,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at several universities. I'm also a science fiction fan"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.7,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.705593,
+              "is_coherent": true,
+              "output_text": " I'll try to answer it.\nI'm a science historian, and I've been studying the history of science for over 20 years. I've written a few books and many articles on the subject, and I've taught the history of science at several universities. I'm also a science fiction fan"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.75,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.755992,
+              "is_coherent": true,
+              "output_text": " I'll try to answer, but I'm not an expert. I'll try to find out if I don't know.\nI'm not an expert, but I'll try to answer. If I don't know, I'll try to find out.\nI'm not an expert, but I'll"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.8,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.806392,
+              "is_coherent": true,
+              "output_text": " I'll try to answer, but I'm not an expert, so I might not know. But I'll try.\nI'll start: The first person to suggest that the Earth might be round was Anaxagoras, in the 5th century BC. He was a Greek, and he"
+            },
+            {
+              "shape": "constant",
+              "f_scale": 0.85,
+              "k_optimal": 1.008,
+              "k_optimal_source": "window",
+              "k_peak_raw": 0.856791,
+              "is_coherent": false,
+              "output_text": " I'll bet I can guess what it is.\nI'll bet I can guess what it is.\nI'll bet I can guess what it is. I'll bet I can guess what it is. I'll bet I can guess what it is. I'll bet I can guess what it is."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

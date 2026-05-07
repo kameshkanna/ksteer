@@ -1,0 +1,26 @@
+{
+  "formality": {
+    "num_pairs": 20,
+    "window_consistency_mean": 0.45940067370732623,
+    "peak_consistency_layer": 15,
+    "peak_consistency": 0.5752385258674622
+  },
+  "refusal": {
+    "num_pairs": 20,
+    "window_consistency_mean": 0.564827044804891,
+    "peak_consistency_layer": 5,
+    "peak_consistency": 0.5707215070724487
+  },
+  "sycophancy": {
+    "num_pairs": 25,
+    "window_consistency_mean": 0.4613058517376582,
+    "peak_consistency_layer": 15,
+    "peak_consistency": 0.5021914839744568
+  },
+  "verbosity": {
+    "num_pairs": 15,
+    "window_consistency_mean": 0.9883565107981364,
+    "peak_consistency_layer": 1,
+    "peak_consistency": 0.9990467429161072
+  }
+}

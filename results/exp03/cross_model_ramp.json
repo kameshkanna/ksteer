@@ -1,0 +1,639 @@
+{
+  "llama-3.2-1b": {
+    "model": "llama-3.2-1b",
+    "family": "llama",
+    "baseline_f_max": 0.48,
+    "f_start": 0.13,
+    "f_start_frac": 0.2708,
+    "k_optimal_mid": 1.0622,
+    "k_optimal_window": 1.0827,
+    "shape_source_stats": {
+      "linear": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "mean_f_scale_max": 0.275,
+          "std_f_scale_max": 0.175,
+          "mean_k_peak_raw": 0.292107,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "mean_f_scale_max": 0.275,
+          "std_f_scale_max": 0.175,
+          "mean_k_peak_raw": 0.297746,
+          "formula_holds": false
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "mean_f_scale_max": 0.275,
+          "std_f_scale_max": 0.175,
+          "mean_k_peak_raw": 0.292107,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "mean_f_scale_max": 0.275,
+          "std_f_scale_max": 0.175,
+          "mean_k_peak_raw": 0.297746,
+          "formula_holds": false
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "mean_f_scale_max": 0.2167,
+          "std_f_scale_max": 0.165,
+          "mean_k_peak_raw": 0.230145,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "mean_f_scale_max": 0.2167,
+          "std_f_scale_max": 0.165,
+          "mean_k_peak_raw": 0.234588,
+          "formula_holds": false
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "mean_f_scale_max": 0.3625,
+          "std_f_scale_max": 0.2966,
+          "mean_k_peak_raw": 0.38505,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "mean_f_scale_max": 0.375,
+          "std_f_scale_max": 0.3172,
+          "mean_k_peak_raw": 0.406017,
+          "formula_holds": false
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 1.0622,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.424883,
+          "formula_holds": true
+        },
+        "window": {
+          "k_optimal": 1.0827,
+          "mean_f_scale_max": 0.35,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.378949,
+          "formula_holds": false
+        }
+      }
+    }
+  },
+  "llama-3.2-3b": {
+    "model": "llama-3.2-3b",
+    "family": "llama",
+    "baseline_f_max": 0.48,
+    "f_start": 0.13,
+    "f_start_frac": 0.2708,
+    "k_optimal_mid": 1.3019,
+    "k_optimal_window": 1.3612,
+    "shape_source_stats": {
+      "linear": {
+        "mid": {
+          "k_optimal": 1.3019,
+          "mean_f_scale_max": 0.45,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.585843,
+          "formula_holds": true
+        },
+        "window": {
+          "k_optimal": 1.3612,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.5445,
+          "formula_holds": true
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 1.3019,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.520749,
+          "formula_holds": true
+        },
+        "window": {
+          "k_optimal": 1.3612,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.5445,
+          "formula_holds": true
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 1.3019,
+          "mean_f_scale_max": 0.45,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.585843,
+          "formula_holds": true
+        },
+        "window": {
+          "k_optimal": 1.3612,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.5445,
+          "formula_holds": true
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 1.3019,
+          "mean_f_scale_max": 0.95,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 1.23678,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.3612,
+          "mean_f_scale_max": 0.9,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 1.225124,
+          "formula_holds": false
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 1.3019,
+          "mean_f_scale_max": 0.25,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.325468,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.3612,
+          "mean_f_scale_max": 0.2,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.27225,
+          "formula_holds": false
+        }
+      }
+    }
+  },
+  "llama-3.1-8b": {
+    "model": "llama-3.1-8b",
+    "family": "llama",
+    "baseline_f_max": 0.48,
+    "f_start": 0.13,
+    "f_start_frac": 0.2708,
+    "k_optimal_mid": 0.9542,
+    "k_optimal_window": 1.008,
+    "shape_source_stats": {
+      "linear": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "mean_f_scale_max": 0.4167,
+          "std_f_scale_max": 0.413,
+          "mean_k_peak_raw": 0.397571,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.4243,
+          "mean_k_peak_raw": 0.403196,
+          "formula_holds": false
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "mean_f_scale_max": 0.4667,
+          "std_f_scale_max": 0.3793,
+          "mean_k_peak_raw": 0.445279,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "mean_f_scale_max": 0.4333,
+          "std_f_scale_max": 0.4028,
+          "mean_k_peak_raw": 0.436796,
+          "formula_holds": false
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "mean_f_scale_max": 0.4667,
+          "std_f_scale_max": 0.3859,
+          "mean_k_peak_raw": 0.445279,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.4243,
+          "mean_k_peak_raw": 0.403196,
+          "formula_holds": false
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "mean_f_scale_max": 0.5375,
+          "std_f_scale_max": 0.3698,
+          "mean_k_peak_raw": 0.512866,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "mean_f_scale_max": 0.5,
+          "std_f_scale_max": 0.3657,
+          "mean_k_peak_raw": 0.503995,
+          "formula_holds": false
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 0.9542,
+          "mean_f_scale_max": 0.85,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.811045,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 1.008,
+          "mean_f_scale_max": 0.8,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 0.806392,
+          "formula_holds": false
+        }
+      }
+    }
+  },
+  "qwen2.5-3b": {
+    "model": "qwen2.5-3b",
+    "family": "qwen2",
+    "baseline_f_max": 0.48,
+    "f_start": 0.13,
+    "f_start_frac": 0.2708,
+    "k_optimal_mid": 11.3183,
+    "k_optimal_window": 11.4311,
+    "shape_source_stats": {
+      "linear": {
+        "mid": {
+          "k_optimal": 11.3183,
+          "mean_f_scale_max": 0.9875,
+          "std_f_scale_max": 0.0217,
+          "mean_k_peak_raw": 11.176775,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 11.4311,
+          "mean_f_scale_max": 0.9875,
+          "std_f_scale_max": 0.0217,
+          "mean_k_peak_raw": 11.288203,
+          "formula_holds": false
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 11.3183,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 11.318254,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 11.4311,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 11.431091,
+          "formula_holds": false
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 11.3183,
+          "mean_f_scale_max": 0.9875,
+          "std_f_scale_max": 0.0217,
+          "mean_k_peak_raw": 11.176775,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 11.4311,
+          "mean_f_scale_max": 0.975,
+          "std_f_scale_max": 0.0433,
+          "mean_k_peak_raw": 11.145314,
+          "formula_holds": false
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 11.3183,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 11.318254,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 11.4311,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 11.431091,
+          "formula_holds": false
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 11.3183,
+          "mean_f_scale_max": 0.8375,
+          "std_f_scale_max": 0.2274,
+          "mean_k_peak_raw": 9.479037,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 11.4311,
+          "mean_f_scale_max": 0.6875,
+          "std_f_scale_max": 0.198,
+          "mean_k_peak_raw": 7.858875,
+          "formula_holds": false
+        }
+      }
+    }
+  },
+  "qwen2.5-7b": {
+    "model": "qwen2.5-7b",
+    "family": "qwen2",
+    "baseline_f_max": 0.48,
+    "f_start": 0.13,
+    "f_start_frac": 0.2708,
+    "k_optimal_mid": 28.3019,
+    "k_optimal_window": 28.5528,
+    "shape_source_stats": {
+      "linear": {
+        "mid": {
+          "k_optimal": 28.3019,
+          "mean_f_scale_max": 0.85,
+          "std_f_scale_max": 0.1061,
+          "mean_k_peak_raw": 24.056589,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 28.5528,
+          "mean_f_scale_max": 0.85,
+          "std_f_scale_max": 0.1061,
+          "mean_k_peak_raw": 24.269896,
+          "formula_holds": false
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 28.3019,
+          "mean_f_scale_max": 0.8125,
+          "std_f_scale_max": 0.1083,
+          "mean_k_peak_raw": 22.995268,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 28.5528,
+          "mean_f_scale_max": 0.8125,
+          "std_f_scale_max": 0.1083,
+          "mean_k_peak_raw": 23.199166,
+          "formula_holds": false
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 28.3019,
+          "mean_f_scale_max": 0.825,
+          "std_f_scale_max": 0.1031,
+          "mean_k_peak_raw": 23.349042,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 28.5528,
+          "mean_f_scale_max": 0.8125,
+          "std_f_scale_max": 0.1083,
+          "mean_k_peak_raw": 23.199166,
+          "formula_holds": false
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 28.3019,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 28.301869,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 28.5528,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 28.552819,
+          "formula_holds": false
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 28.3019,
+          "mean_f_scale_max": 0.6375,
+          "std_f_scale_max": 0.2132,
+          "mean_k_peak_raw": 18.042441,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 28.5528,
+          "mean_f_scale_max": 0.6375,
+          "std_f_scale_max": 0.2132,
+          "mean_k_peak_raw": 18.202422,
+          "formula_holds": false
+        }
+      }
+    }
+  },
+  "gemma-2-2b": {
+    "model": "gemma-2-2b",
+    "family": "gemma2",
+    "baseline_f_max": 0.48,
+    "f_start": 0.13,
+    "f_start_frac": 0.2708,
+    "k_optimal_mid": 8.5108,
+    "k_optimal_window": 9.3481,
+    "shape_source_stats": {
+      "linear": {
+        "mid": {
+          "k_optimal": 8.5108,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 8.510808,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3481,
+          "mean_f_scale_max": 0.975,
+          "std_f_scale_max": 0.0433,
+          "mean_k_peak_raw": 9.114424,
+          "formula_holds": false
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 8.5108,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 8.510808,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3481,
+          "mean_f_scale_max": 0.9875,
+          "std_f_scale_max": 0.0217,
+          "mean_k_peak_raw": 9.231275,
+          "formula_holds": false
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 8.5108,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 8.510808,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3481,
+          "mean_f_scale_max": 0.975,
+          "std_f_scale_max": 0.0433,
+          "mean_k_peak_raw": 9.114424,
+          "formula_holds": false
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 8.5108,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 8.510808,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3481,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 9.348127,
+          "formula_holds": false
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 8.5108,
+          "mean_f_scale_max": 0.8875,
+          "std_f_scale_max": 0.1949,
+          "mean_k_peak_raw": 7.553342,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3481,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 9.348127,
+          "formula_holds": false
+        }
+      }
+    }
+  },
+  "gemma-2-9b": {
+    "model": "gemma-2-9b",
+    "family": "gemma2",
+    "baseline_f_max": 0.48,
+    "f_start": 0.13,
+    "f_start_frac": 0.2708,
+    "k_optimal_mid": 8.951,
+    "k_optimal_window": 9.3892,
+    "shape_source_stats": {
+      "linear": {
+        "mid": {
+          "k_optimal": 8.951,
+          "mean_f_scale_max": 0.575,
+          "std_f_scale_max": 0.425,
+          "mean_k_peak_raw": 5.146846,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "mean_f_scale_max": 0.7,
+          "std_f_scale_max": 0.4243,
+          "mean_k_peak_raw": 6.572445,
+          "formula_holds": false
+        }
+      },
+      "cosine": {
+        "mid": {
+          "k_optimal": 8.951,
+          "mean_f_scale_max": 0.55,
+          "std_f_scale_max": 0.45,
+          "mean_k_peak_raw": 4.92307,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "mean_f_scale_max": 0.55,
+          "std_f_scale_max": 0.45,
+          "mean_k_peak_raw": 5.164064,
+          "formula_holds": false
+        }
+      },
+      "bell": {
+        "mid": {
+          "k_optimal": 8.951,
+          "mean_f_scale_max": 0.4,
+          "std_f_scale_max": 0.4243,
+          "mean_k_peak_raw": 3.580414,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "mean_f_scale_max": 0.55,
+          "std_f_scale_max": 0.45,
+          "mean_k_peak_raw": 5.164064,
+          "formula_holds": false
+        }
+      },
+      "exponential": {
+        "mid": {
+          "k_optimal": 8.951,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 8.951036,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 9.389206,
+          "formula_holds": false
+        }
+      },
+      "constant": {
+        "mid": {
+          "k_optimal": 8.951,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 8.951036,
+          "formula_holds": false
+        },
+        "window": {
+          "k_optimal": 9.3892,
+          "mean_f_scale_max": 1.0,
+          "std_f_scale_max": 0.0,
+          "mean_k_peak_raw": 9.389206,
+          "formula_holds": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "model": "gemma-2-2b",
+  "family": "gemma2",
+  "baseline_f_max": 0.48,
+  "f_start": 0.13,
+  "f_start_frac": 0.2708,
+  "k_optimal_mid": 8.5108,
+  "k_optimal_window": 9.3481,
+  "shape_source_stats": {
+    "linear": {
+      "mid": {
+        "k_optimal": 8.5108,
+        "mean_f_scale_max": 1.0,
+        "std_f_scale_max": 0.0,
+        "mean_k_peak_raw": 8.510808,
+        "formula_holds": false
+      },
+      "window": {
+        "k_optimal": 9.3481,
+        "mean_f_scale_max": 0.975,
+        "std_f_scale_max": 0.0433,
+        "mean_k_peak_raw": 9.114424,
+        "formula_holds": false
+      }
+    },
+    "cosine": {
+      "mid": {
+        "k_optimal": 8.5108,
+        "mean_f_scale_max": 1.0,
+        "std_f_scale_max": 0.0,
+        "mean_k_peak_raw": 8.510808,
+        "formula_holds": false
+      },
+      "window": {
+        "k_optimal": 9.3481,
+        "mean_f_scale_max": 0.9875,
+        "std_f_scale_max": 0.0217,
+        "mean_k_peak_raw": 9.231275,
+        "formula_holds": false
+      }
+    },
+    "bell": {
+      "mid": {
+        "k_optimal": 8.5108,
+        "mean_f_scale_max": 1.0,
+        "std_f_scale_max": 0.0,
+        "mean_k_peak_raw": 8.510808,
+        "formula_holds": false
+      },
+      "window": {
+        "k_optimal": 9.3481,
+        "mean_f_scale_max": 0.975,
+        "std_f_scale_max": 0.0433,
+        "mean_k_peak_raw": 9.114424,
+        "formula_holds": false
+      }
+    },
+    "exponential": {
+      "mid": {
+        "k_optimal": 8.5108,
+        "mean_f_scale_max": 1.0,
+        "std_f_scale_max": 0.0,
+        "mean_k_peak_raw": 8.510808,
+        "formula_holds": false
+      },
+      "window": {
+        "k_optimal": 9.3481,
+        "mean_f_scale_max": 1.0,
+        "std_f_scale_max": 0.0,
+        "mean_k_peak_raw": 9.348127,
+        "formula_holds": false
+      }
+    },
+    "constant": {
+      "mid": {
+        "k_optimal": 8.5108,
+        "mean_f_scale_max": 0.8875,
+        "std_f_scale_max": 0.1949,
+        "mean_k_peak_raw": 7.553342,
+        "formula_holds": false
+      },
+      "window": {
+        "k_optimal": 9.3481,
+        "mean_f_scale_max": 1.0,
+        "std_f_scale_max": 0.0,
+        "mean_k_peak_raw": 9.348127,
+        "formula_holds": false
+      }
+    }
+  }
+}
