@@ -69,6 +69,13 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--ramp-f-values", nargs="+", type=float, default=None,
                    help="f_end values to sweep (default: 0.10 to 1.0 in 0.05 steps)")
 
+    # ── Exp 04 flags ─────────────────────────────────────────────────────────
+    p.add_argument("--run-harmbench", action="store_true",
+                   help="Run Exp 04 HarmBench steering evaluation (Llama family only)")
+    p.add_argument("--judge-model", default="Qwen/Qwen2.5-7B-Instruct", type=str)
+    p.add_argument("--harmbench-f-scale", type=float, default=0.35)
+    p.add_argument("--harmbench-n", type=int, default=20)
+
     # ── Run control ──────────────────────────────────────────────────────────
     p.add_argument("--skip-existing", action="store_true")
     p.add_argument("--dry-run", action="store_true")
@@ -108,6 +115,10 @@ def exp03_done(model_key: str, exp03_dir: Path) -> bool:
     return (exp03_dir / model_key / "ramp_summary.json").exists()
 
 
+def exp04_done(model_key: str, exp04_dir: Path) -> bool:
+    return (exp04_dir / model_key / "harmbench_eval.json").exists()
+
+
 def build_exp01_cmd(model_key: str, model_cfg: dict, args: argparse.Namespace, exp01_dir: Path) -> list[str]:
     cmd = [
         sys.executable,
@@ -139,6 +150,25 @@ def build_exp02_cmd(model_key: str, model_cfg: dict, args: argparse.Namespace, e
         cmd += ["--behaviors"] + args.behaviors
     if args.skip_existing:
         cmd += ["--skip-existing"]
+    return cmd
+
+
+def build_exp04_cmd(model_key: str, model_cfg: dict, args: argparse.Namespace,
+                    exp01_dir: Path, exp02_dir: Path, exp04_dir: Path) -> list[str]:
+    cmd = [
+        sys.executable,
+        str(REPO_ROOT / "experiments" / "exp04_steer_harmbench.py"),
+        "--model", model_cfg["model_id"],
+        "--model-name", model_key,
+        "--exp01-dir", str(exp01_dir),
+        "--exp02-dir", str(exp02_dir),
+        "--output-dir", str(exp04_dir),
+        "--judge-model", args.judge_model,
+        "--f-scale", str(args.harmbench_f_scale),
+        "--n-behaviors", str(args.harmbench_n),
+    ]
+    if args.device:
+        cmd += ["--device", args.device]
     return cmd
 
 
@@ -190,6 +220,7 @@ def main() -> None:
     exp01_dir = base_dir / "exp01"
     exp02_dir = base_dir / "exp02"
     exp03_dir = base_dir / "exp03"
+    exp04_dir = base_dir / "exp04"
 
     config = load_config(args.config)
     selected = select_models(config, args)
@@ -201,13 +232,15 @@ def main() -> None:
 
     # ── Print plan ───────────────────────────────────────────────────────────
     logger.info("Selected %d model(s):", len(selected))
-    logger.info("  %-25s  %6s  %6s  %6s", "model", "exp01", "exp02", "exp03")
-    logger.info("  " + "─" * 48)
+    logger.info("  %-25s  %6s  %6s  %6s  %6s", "model", "exp01", "exp02", "exp03", "exp04")
+    logger.info("  " + "─" * 56)
     for key, cfg in selected:
         e1 = "SKIP" if (args.skip_existing and exp01_done(key, exp01_dir)) else "run"
         e2 = "SKIP" if (args.skip_existing and exp02_done(key, exp02_dir, data_dir, args.behaviors)) else "run"
         e3 = "SKIP" if (args.skip_existing and exp03_done(key, exp03_dir)) else "run"
-        logger.info("  %-25s  %6s  %6s  %6s", key, e1, e2, e3)
+        e4 = ("SKIP" if (args.skip_existing and exp04_done(key, exp04_dir)) else "run") \
+             if (args.run_harmbench and cfg.get("family") == "llama") else "—"
+        logger.info("  %-25s  %6s  %6s  %6s  %6s", key, e1, e2, e3, e4)
 
     if args.dry_run:
         logger.info("Dry run — nothing executed.")
@@ -258,15 +291,28 @@ def main() -> None:
             )
             results[model_key]["exp03"] = ok
 
+        # Exp 04 — only for Llama family when --run-harmbench is set
+        if args.run_harmbench and model_cfg.get("family") == "llama":
+            if args.skip_existing and exp04_done(model_key, exp04_dir):
+                logger.info("  exp04: exists, skipping.")
+                results[model_key]["exp04"] = True
+            else:
+                ok = run_subprocess(
+                    build_exp04_cmd(model_key, model_cfg, args, exp01_dir, exp02_dir, exp04_dir),
+                    f"exp04/{model_key}",
+                )
+                results[model_key]["exp04"] = ok
+
     # ── Summary ──────────────────────────────────────────────────────────────
     elapsed = time.time() - total_start
     logger.info("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     logger.info("Done in %.1fs", elapsed)
-    logger.info("  %-25s  %6s  %6s  %6s", "model", "exp01", "exp02", "exp03")
-    logger.info("  " + "─" * 48)
+    logger.info("  %-25s  %6s  %6s  %6s  %6s", "model", "exp01", "exp02", "exp03", "exp04")
+    logger.info("  " + "─" * 56)
     for key, res in results.items():
         fmt = lambda k: ("✓" if res.get(k) else ("—" if k not in res else "✗"))
-        logger.info("  %-25s  %6s  %6s  %6s", key, fmt("exp01"), fmt("exp02"), fmt("exp03"))
+        logger.info("  %-25s  %6s  %6s  %6s  %6s",
+                    key, fmt("exp01"), fmt("exp02"), fmt("exp03"), fmt("exp04"))
 
     failed = [k for k, r in results.items() if not all(r.values())]
     if failed:
