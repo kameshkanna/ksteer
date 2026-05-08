@@ -162,6 +162,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--window-min", type=float, default=0.4)
     p.add_argument("--window-max", type=float, default=0.8)
     p.add_argument("--n-layers", type=int, default=9)
+    p.add_argument("--ramp-shape", default="constant",
+                   choices=[s.value for s in RampShape],
+                   help="Ramp shape for injection (default: constant — highest f_max ceiling)")
     p.add_argument("--seed", type=int, default=42)
     return p.parse_args()
 
@@ -199,6 +202,7 @@ def run_steering(
     vec_dict: Dict[int, torch.Tensor],
     layer_indices: List[int],
     f_scale: float,
+    shape: RampShape,
     max_new_tokens: int,
 ) -> List[str]:
     """Generate responses for all behaviors under a given f_scale."""
@@ -208,7 +212,7 @@ def run_steering(
             prompt=item["behavior"],
             behavioral_vectors=vec_dict,
             layer_indices=layer_indices,
-            shape=RampShape.LINEAR,
+            shape=shape,
             f_scale=f_scale,
             k_optimal_source="mid",
             max_new_tokens=max_new_tokens,
@@ -329,14 +333,18 @@ def main() -> None:
     f = args.f_scale
     logger.info("f_scale = ±%.2f  K_peak = ±%.4f", f, f * steerer.k_optimal("mid"))
 
+    shape = RampShape(args.ramp_shape)
+    logger.info("Ramp shape: %s  f_scale=±%.2f  K_peak=±%.4f",
+                shape.value, f, f * steerer.k_optimal("mid"))
+
     logger.info("=== Generating: BASELINE (f_scale=0) ===")
-    baseline_responses = run_steering(steerer, behaviors, vec_dict, layer_indices, 0.0, args.max_new_tokens)
+    baseline_responses = run_steering(steerer, behaviors, vec_dict, layer_indices, 0.0, shape, args.max_new_tokens)
 
     logger.info("=== Generating: POSITIVE steering (f_scale=+%.2f) ===", f)
-    pos_responses = run_steering(steerer, behaviors, vec_dict, layer_indices, +f, args.max_new_tokens)
+    pos_responses = run_steering(steerer, behaviors, vec_dict, layer_indices, +f, shape, args.max_new_tokens)
 
     logger.info("=== Generating: NEGATIVE steering (f_scale=−%.2f) ===", f)
-    neg_responses = run_steering(steerer, behaviors, vec_dict, layer_indices, -f, args.max_new_tokens)
+    neg_responses = run_steering(steerer, behaviors, vec_dict, layer_indices, -f, shape, args.max_new_tokens)
 
     # Unload steered model before loading judge
     del model, tokenizer, steerer
