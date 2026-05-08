@@ -98,10 +98,19 @@ def _load_behaviors(
         if hf_token:
             kwargs["token"] = hf_token
         ds = load_dataset("AlignmentResearch/ClearHarm", split="train", **kwargs)
-        # ClearHarm stores behaviors in the "behavior" column
-        col = "behavior" if "behavior" in ds.column_names else ds.column_names[0]
-        behaviors = [str(row[col]) for row in ds]
-        logger.info("Loaded %d behaviors from ClearHarm (col=%s)", len(behaviors), col)
+        # ClearHarm: behavior text is in "content" as a single-element list
+        if "content" in ds.column_names:
+            behaviors = [
+                row["content"][0] if isinstance(row["content"], list) else str(row["content"])
+                for row in ds
+            ]
+        elif "behavior" in ds.column_names:
+            behaviors = [str(row["behavior"]) for row in ds]
+        else:
+            raise RuntimeError(
+                f"Cannot find behavior column in ClearHarm. Columns: {ds.column_names}"
+            )
+        logger.info("Loaded %d behaviors from ClearHarm", len(behaviors))
         return behaviors
     except Exception as exc:
         logger.error("Failed to load ClearHarm: %s", exc, exc_info=True)
