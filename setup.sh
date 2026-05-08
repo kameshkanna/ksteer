@@ -57,10 +57,9 @@ pip install --quiet -e .
 # ── 8. Smoke test ────────────────────────────────────────────────────────────
 python - <<'EOF'
 import torch
-from ksteer import LayerNormProfiler, NormProfile, CeilingSweeper
-from ksteer import ContrastiveExtractor, BehavioralVector, load_behavior_pairs
+from ksteer import LayerNormProfiler, IronWallExtractor, PAIRS, compute_k_max, inject, remove_hooks
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"ksteer imports OK | torch={torch.__version__} | device={device}")
+print(f"ksteer imports OK | torch={torch.__version__} | device={device} | pairs={len(PAIRS)}")
 EOF
 
 echo ""
