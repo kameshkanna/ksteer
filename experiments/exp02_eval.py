@@ -94,7 +94,7 @@ def _load_behaviors(
 
     try:
         from datasets import load_dataset
-        kwargs: dict = {"trust_remote_code": True}
+        kwargs: dict = {}
         if hf_token:
             kwargs["token"] = hf_token
         ds = load_dataset("AlignmentResearch/ClearHarm", split="train", **kwargs)
@@ -381,8 +381,10 @@ def main() -> None:
 
     # ── K sweep range ────────────────────────────────────────────────────────
     if args.K is not None:
-        if args.K < 1 or args.K > k_max:
-            raise ValueError(f"K={args.K} out of range [1, {k_max}]")
+        if args.K < 1:
+            raise ValueError(f"K must be >= 1, got {args.K}")
+        if args.K > k_max:
+            logger.warning("K=%d exceeds K_max=%d — output may be incoherent (ceiling test)", args.K, k_max)
         k_values = [0, args.K]
     else:
         k_values = list(range(0, k_max + 1))   # 0 = baseline, 1…K_max = steered
